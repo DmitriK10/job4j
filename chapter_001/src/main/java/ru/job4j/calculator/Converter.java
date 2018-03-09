@@ -4,7 +4,7 @@ package ru.job4j.calculator;
  * Корвертор валюты.
  * @author DKupriyanyuk
  * @version $ld$
- * @since 08.03.2018
+ * @since 09.03.2018
  */
 
 public class Converter {
