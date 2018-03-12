@@ -5,6 +5,7 @@ package ru.job4j.condition;
  * @version $Id$
  * @since 12.03.18
  */
+
 public class DummyBot {
     /**
      * Отвечает на вопросы.

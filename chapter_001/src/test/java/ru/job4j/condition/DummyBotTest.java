@@ -9,6 +9,7 @@ import static org.junit.Assert.assertThat;
  * @version $Id$
  * @since 12.03.18
  */
+
 public class DummyBotTest {
     @Test
     public void whenGreetBot() {
