@@ -15,10 +15,12 @@ public class Max {
      * @return Евро.
      */
     public int max(int first, int second) {
+        /*
         if (first > second) {
             return first;
         } else {
             return second;
-        }
+        } */
+        return first > second ? first : second;
     }
 }
