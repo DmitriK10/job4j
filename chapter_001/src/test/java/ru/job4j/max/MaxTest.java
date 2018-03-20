@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
  * Class MaxTest.
  * @author DKupriyanyuk
  * @version $ld$
- * @since 13.03.2018
+ * @since 20.03.2018
  */
 
 public class MaxTest {
