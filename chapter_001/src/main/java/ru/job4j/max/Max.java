@@ -13,18 +13,20 @@ public class Max {
      * @param first первое число.
      * @param second второе число.
      * @return Максимум.
+     */
+    public int maxOfTwo(int first, int second) {
 
-    public int max(int first, int second) {
         /*
         if (first > second) {
+
             return first;
         } else {
             return second;
-        } */
-       /*
+        }
+        */
         return first > second ? first : second;
     }
-    */
+
 
  /**
   * Ищем большее из трех чисел.
@@ -38,6 +40,9 @@ public class Max {
         //temp = Math.max(temp, third);
         //int temp = Math.max(first, Math.max(second, third));
         //return temp;
-        return Math.max(first, Math.max(second, third));
+
+       // int temp = this.maxOfTwo(first, second);
+
+        return this.maxOfTwo(this.maxOfTwo(first, second), third);
     }
 }
