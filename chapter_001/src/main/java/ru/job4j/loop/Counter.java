@@ -17,14 +17,19 @@ public class Counter {
 
     public int add(int start, int finish) {
         int sum = 0;   // сумма чисел
-        int i = start;
+        //int i = start;
 
-        while (i <= finish){
+        for (int i=  start; i <= finish; i++) {
+            if (i % 2 == 0){
+                sum += i;
+            }
+        }
+        /*while (i <= finish){
             if (i % 2 == 0){
                 sum += i;
             }
             i++;
-        }
+        }*/
         return sum;
     }
 }
