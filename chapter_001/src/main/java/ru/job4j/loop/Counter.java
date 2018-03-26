@@ -19,11 +19,9 @@ public class Counter {
         int sum = 0;   // сумма чисел
         int i = start;
 
-        while (i <= finish)
-        {
-            if (i % 2 != 0)
-            {
-               sum += i;
+        while (i <= finish){
+            if (i % 2 == 0){
+                sum += i;
             }
             i++;
         }

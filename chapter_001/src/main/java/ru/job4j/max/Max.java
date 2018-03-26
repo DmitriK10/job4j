@@ -14,7 +14,7 @@ public class Max {
      * @param second второе число.
      * @return Максимум.
      */
-    public int maxOfTwo(int first, int second) {
+    public int max(int first, int second) {
 
         /*
         if (first > second) {
@@ -43,6 +43,6 @@ public class Max {
 
        // int temp = this.maxOfTwo(first, second);
 
-        return this.maxOfTwo(this.maxOfTwo(first, second), third);
+        return this.max(this.max(first, second), third);
     }
 }
