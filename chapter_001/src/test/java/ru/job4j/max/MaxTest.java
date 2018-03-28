@@ -23,6 +23,6 @@ public class MaxTest {
     public void whenSecondLessFirst() {
         Max max = new Max();
         int result = max.max(4, 2,  1);
-        assertThat(result, is(1));
+        assertThat(result, is(4));
     }
 }
