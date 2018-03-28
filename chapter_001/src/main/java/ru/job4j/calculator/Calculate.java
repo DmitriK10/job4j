@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.calculator;
 
 /**
  * Calculate.
@@ -12,6 +12,7 @@ public class Calculate {
      * Main.
      * @param args - args.
      */
+
     public static void main(String[] args) {
         System.out.println("Hello World");
     }

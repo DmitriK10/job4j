@@ -11,6 +11,7 @@ import static org.junit.Assert.assertThat;
  *@version $ld$
  *@since 28.02.2018
  */
+
 public class CalculatorTest {
     @Test
     public void whenAddOnePlusOneThenTwo() {
