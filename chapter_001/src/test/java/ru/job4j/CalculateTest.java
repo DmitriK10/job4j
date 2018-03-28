@@ -15,6 +15,7 @@ import static org.junit.Assert.assertThat;
  * @version $Id$
  * @since 0.1
  */
+
 public class CalculateTest {
     /**
      * Test add.

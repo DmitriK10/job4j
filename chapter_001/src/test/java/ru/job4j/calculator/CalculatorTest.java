@@ -12,6 +12,7 @@ import static org.junit.Assert.assertThat;
  *@since 28.02.2018
  */
 
+
 public class CalculatorTest {
     @Test
     public void whenAddOnePlusOneThenTwo() {
