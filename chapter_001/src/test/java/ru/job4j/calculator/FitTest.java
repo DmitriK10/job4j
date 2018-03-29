@@ -17,13 +17,13 @@ public class FitTest {
     public void manWeight() {
         Fit fit = new Fit();
         double weight = fit.manWeight(180);
-        assertThat(weight, is(92D));
+        assertThat(weight, is(92.0));
     }
 
     @Test
     public void womanWeight() {
         Fit fit = new Fit();
-        double weight = fit.manWeight(170);
-        assertThat(weight, is(69D));
+        double weight = fit.womanWeight(170);
+        assertThat(weight, is(69.0));
     }
 }
