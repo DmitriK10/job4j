@@ -6,7 +6,6 @@ package ru.job4j.loop;
  * @since 29.03.18
  */
 
-
 public class Paint {
 
     /**
