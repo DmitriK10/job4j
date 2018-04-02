@@ -24,7 +24,7 @@ public class BubbleSortTest {
 
     @Test
     public void whenBubbleSortArrayArrayWithOddAmountOfElementsThenSortedArray() {
-        //напишите здесь тест, сортирующий массива с чётным числом элементов, например {1, 2, 3, 4, 5, 6}.
+        //напишите здесь тест, сортирующий массив с чётным числом элементов, например {5, 1, 1, 4, 4, 1, 2, 0}.
         BubbleSort BubbleSort = new BubbleSort();
         int[] input = new int[] {5, 1, 1, 4, 4, 1, 2, 0};
         int[] result = BubbleSort.bubblesort(input);
