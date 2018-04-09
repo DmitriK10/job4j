@@ -11,7 +11,6 @@ import static org.junit.Assert.assertThat;
  * @since 03.04.2018
  */
 
-
 public class MatrixTest {
 
     @Test

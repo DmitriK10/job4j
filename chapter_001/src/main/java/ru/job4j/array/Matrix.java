@@ -6,7 +6,6 @@ package ru.job4j.array;
  * @since 03.04.18
  */
 
-
 public class Matrix {
     /**
      * Реализовать таблицу умножения.
