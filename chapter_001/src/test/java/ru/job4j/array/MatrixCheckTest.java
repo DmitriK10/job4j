@@ -4,6 +4,13 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Class MatrixCheckTest.
+ * @author DKupriyanyuk
+ * @version $ld$
+ * @since 18.07.2018
+ */
+
 public class MatrixCheckTest {
     @Test
     public void whenDataMonoByTrueThenTrue() {

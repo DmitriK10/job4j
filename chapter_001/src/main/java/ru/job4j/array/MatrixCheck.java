@@ -7,6 +7,13 @@ package ru.job4j.array;
  */
 
 public class MatrixCheck {
+
+    /**
+     * Необходимо проверить, что все элементы по диагоналям равны true или false.
+     * @param data массив чисел.
+     * @return  результат проверки.
+     */
+
     public boolean mono(boolean[][] data) {
         Boolean  symb = data[0][0];
         boolean toright, toleft;
