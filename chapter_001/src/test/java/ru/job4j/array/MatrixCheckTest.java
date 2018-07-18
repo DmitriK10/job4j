@@ -10,7 +10,6 @@ import static org.junit.Assert.assertThat;
  * @version $ld$
  * @since 18.07.2018
  */
-
 public class MatrixCheckTest {
     @Test
     public void whenDataMonoByTrueThenTrue() {

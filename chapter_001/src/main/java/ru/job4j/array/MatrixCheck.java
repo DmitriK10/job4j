@@ -10,7 +10,7 @@ public class MatrixCheck {
 
     /**
      * Необходимо проверить, что все элементы по диагоналям равны true или false.
-     * @param data массив чисел.
+     * @param data массив true или false.
      * @return  результат проверки.
      */
 
