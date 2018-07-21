@@ -15,15 +15,16 @@ public class MatrixCheck {
      */
 
     public boolean mono(boolean[][] data) {
-        Boolean  symb = data[0][0];
+        Boolean  symbLeftDiag = data[0][0];
+        Boolean  symbRightDiag = data[data.length-1][0];
         boolean toright, toleft;
         toright = true;
         toleft = true;
         for (int i = 0; i < data.length; i++) {
-            toright &= (data[i][i] == symb);
-            toleft &= (data[data.length-i-1][i] == symb);
+            toright = toright & (data[i][i] == symbLeftDiag);
+            toleft &= (data[data.length-i-1][i] == symbRightDiag);
         }
 
-        return toright || toleft;
+        return toright & toleft;
     }
 }
