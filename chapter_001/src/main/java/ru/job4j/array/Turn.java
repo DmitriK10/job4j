@@ -7,13 +7,11 @@ package ru.job4j.array;
  */
 
 public class Turn {
-
     /**
      * Реализовать переворот значений задом наперёд в массиве.
      * @param array массив чисел.
      * @return array перевёрнутый массив.
      */
-
     public int[] turn(int[] array) {
         for (int i = 0; i < array.length/2; i++) {
             int tempData = array[array.length - 1 - i];

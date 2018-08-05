@@ -15,7 +15,7 @@ public class Fit {
      */
     double manWeight(double height) {
         height = (height - 100) * 1.15;
-        return height; //-1D;
+        return height;
     }
 
     /**
@@ -25,6 +25,6 @@ public class Fit {
      */
     double womanWeight(double height) {
         height = (height - 110) * 1.15;
-        return height; // -1D;
-    }
+        return height;
+}
 }

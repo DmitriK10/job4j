@@ -7,7 +7,6 @@ package ru.job4j.max;
  */
 
 public class Max {
-
     /**
      * Ищем большее из двух чисел.
      * @param first первое число.
@@ -15,15 +14,6 @@ public class Max {
      * @return Максимум.
      */
     public int max(int first, int second) {
-
-        /*
-        if (first > second) {
-
-            return first;
-        } else {
-            return second;
-        }
-        */
         return first > second ? first : second;
     }
 
@@ -36,13 +26,6 @@ public class Max {
   * @return temp.
   */
     public int max(int first, int second, int third) {
-        //int temp = Math.max(first, second);
-        //temp = Math.max(temp, third);
-        //int temp = Math.max(first, Math.max(second, third));
-        //return temp;
-
-       // int temp = this.maxOfTwo(first, second);
-
         return this.max(this.max(first, second), third);
     }
 }

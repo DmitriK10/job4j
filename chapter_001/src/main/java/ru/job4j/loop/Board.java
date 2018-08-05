@@ -14,7 +14,6 @@ public class Board {
      * @param height высота игрового поля.
      * @return screen игровое поле в формате строки.
      */
-
     public static String paint(int width, int height) {
         StringBuilder screen = new StringBuilder();
         String ln = System.lineSeparator();
@@ -31,11 +30,8 @@ public class Board {
                 }
                 nest++;
             }
-            // добавляем перевод на новую строку.
-            //System.out.print(text1);
             screen.append(ln);
         }
-
         return screen.toString();
     }
 

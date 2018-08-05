@@ -57,7 +57,6 @@ public class Paint {
         return screen.toString();
     }
 
-
     public String pyramid(int height) {
         StringBuilder screen = new StringBuilder();
         int weight = 2 * height - 1;

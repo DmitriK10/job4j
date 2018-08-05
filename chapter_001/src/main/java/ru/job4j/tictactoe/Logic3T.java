@@ -6,7 +6,6 @@ package ru.job4j.tictactoe;
  * @version $Id$
  * @since 23.07.18
  */
-
 public class Logic3T {
     private final Figure3T[][] table;
 
@@ -16,6 +15,7 @@ public class Logic3T {
 
     public boolean isWinnerX() {
         boolean result = false;
+        // проверка выигрышной комбинации для крестиков на горизонталям игрового поля
         for (Figure3T[] aTable : table) {
             int NumX = 0;
             for (int j = 0; j < table.length; j++) {
@@ -28,7 +28,7 @@ public class Logic3T {
                 }
             }
         }
-
+        // проверка выигрышной комбинации для крестиков по вертикалям игрового поля
         for (int j = 0; j < table.length; j++) {
             int NumX = 0;
             for (Figure3T[] aTable : table) {
@@ -41,19 +41,10 @@ public class Logic3T {
                 }
             }
         }
+        // проверка выигрышной комбинации для крестиков диагоналях игрового поля
         int NumX = 0;
         for (int i = 0; i < table.length; i++) {
-            if (table[i][i].hasMarkX()) {
-                NumX++;
-                if (NumX == 3) {
-                    result = true;
-                    break;
-                }
-            }
-        }
-        NumX = 0;
-        for (int i = 0; i < table.length; i++) {
-            if (table[table.length-i-1][i].hasMarkX()) {
+            if ((table[i][i].hasMarkX()) || (table[table.length - i - 1][i].hasMarkX())) {
                 NumX++;
                 if (NumX == 3) {
                     result = true;
@@ -64,7 +55,9 @@ public class Logic3T {
         return result;
     }
 
+
     public boolean isWinnerO() {
+        // проверка выигрышной комбинации для ноликов на горизонталям игрового поля
         boolean result = false;
         for (Figure3T[] aTable : table) {
             int NumX = 0;
@@ -78,7 +71,7 @@ public class Logic3T {
                 }
             }
         }
-
+        // проверка выигрышной комбинации для ноликов вертикалям
         for (int j = 0; j < table.length; j++) {
             int NumX = 0;
             for (Figure3T[] aTable : table) {
@@ -91,19 +84,10 @@ public class Logic3T {
                 }
             }
         }
-        for (int i = 0; i < table.length; i++) {
-            int NumX = 0;
-            if (table[i][i].hasMarkO()) {
-                NumX++;
-                if (NumX == 3) {
-                    result = true;
-                    break;
-                }
-            }
-        }
+        // проверка выигрышной комбинации для ноликов на диагоналях игрового поля
         int NumX = 0;
         for (int i = 0; i < table.length; i++) {
-            if (table[i][i].hasMarkO()) {
+            if ((table[i][i].hasMarkO()) || (table[table.length - i - 1][i].hasMarkO()))  {
                 NumX++;
                 if (NumX == 3) {
                     result = true;
@@ -111,21 +95,11 @@ public class Logic3T {
                 }
             }
         }
-        NumX = 0;
-        for (int i = 0; i < table.length; i++) {
-            if (table[table.length-i-1][i].hasMarkO()) {
-                NumX++;
-                if (NumX == 3) {
-                    result = true;
-                    break;
-                }
-            }
-        }
-
         return result;
     }
 
     public boolean hasGap() {
+        // проверка наличия пустых клеток для нового хода
         boolean result = false;
         for (Figure3T[] aTable : table) {
             for (int j = 0; j < table.length; j++) {

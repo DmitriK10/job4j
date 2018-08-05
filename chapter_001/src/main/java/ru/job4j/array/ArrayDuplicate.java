@@ -10,9 +10,7 @@ import java.util.Arrays;
  */
 
 public class ArrayDuplicate {
-
     public String[] remove(String[] array) {
-
         int tmp = 1;
         for (int i = 0; i < array.length - tmp; i++) {
             for (int y = i + 1; y < array.length - tmp; y++){
@@ -21,11 +19,9 @@ public class ArrayDuplicate {
                     array[array.length - tmp] = array[y];
                     array[y] = tempStr;
                     tmp++;
-
                 }
             }
         }
-
         return  Arrays.copyOf(array,(array.length - tmp + 1));
     }
 }
