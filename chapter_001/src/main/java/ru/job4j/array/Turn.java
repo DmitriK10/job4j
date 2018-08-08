@@ -5,7 +5,6 @@ package ru.job4j.array;
  * @version $Id$
  * @since 31.03.18
  */
-
 public class Turn {
     /**
      * Реализовать переворот значений задом наперёд в массиве.

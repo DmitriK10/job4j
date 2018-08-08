@@ -5,7 +5,6 @@ package ru.job4j.max;
  * @version $Id$
  * @since 13.03.18
  */
-
 public class Max {
     /**
      * Ищем большее из двух чисел.

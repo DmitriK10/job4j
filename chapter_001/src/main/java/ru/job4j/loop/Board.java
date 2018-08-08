@@ -7,7 +7,6 @@ package ru.job4j.loop;
  */
 
 public class Board {
-
     /**
      * Строим шахматную доску символом Х по заданным: ширине и высоте
      * @param width ширина игрового поля.

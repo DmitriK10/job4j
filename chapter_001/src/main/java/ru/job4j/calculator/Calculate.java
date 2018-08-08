@@ -2,7 +2,6 @@ package ru.job4j.calculator;
 
 /**
  * Calculate.
- *
  * @author Dmitry Kupriyanyuk (dkupriyanyuk@yandex.ru)
  * @version $Id$
  * @since 0.1

@@ -6,7 +6,6 @@ package ru.job4j.array;
  * @version $Id$
  * @since 10.04.18
  */
-
 public class ArrayChar {
     private char[] data;
 

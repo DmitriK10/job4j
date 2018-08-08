@@ -5,7 +5,6 @@ package ru.job4j.array;
  * @version $Id$
  * @since 11.07.18
  */
-
 public class Check {
     /**
      * Проверяем одинаковыми или нет значениями заполнен массив.

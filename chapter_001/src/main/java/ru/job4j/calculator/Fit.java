@@ -26,5 +26,5 @@ public class Fit {
     double womanWeight(double height) {
         height = (height - 110) * 1.15;
         return height;
-}
+    }
 }

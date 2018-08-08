@@ -5,7 +5,6 @@ package ru.job4j.condition;
  * @version $Id$
  * @since 12.03.18
  */
-
 public class DummyBot {
     /**
      * Отвечает на вопросы.
@@ -18,7 +17,7 @@ public class DummyBot {
             rsl = "Привет, умник.";
         } else if ("Пока.".equals(question)) {
             rsl = "До скорой встречи.";
-        } //else "Это ставит меня в тупик. Спросите другой вопрос.".equals(question);
+        }
         return rsl;
     }
 }

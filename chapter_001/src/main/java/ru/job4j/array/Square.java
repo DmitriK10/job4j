@@ -5,7 +5,6 @@ package ru.job4j.array;
  * @version $Id$
  * @since 30.03.18
  */
-
 public class Square {
     public int[] calculate(int bound) {
         int[] rst = new int[bound];

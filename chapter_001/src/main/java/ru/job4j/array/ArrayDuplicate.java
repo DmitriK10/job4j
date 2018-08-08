@@ -8,7 +8,6 @@ import java.util.Arrays;
  * @version $Id$
  * @since 10.04.18
  */
-
 public class ArrayDuplicate {
     public String[] remove(String[] array) {
         int tmp = 1;

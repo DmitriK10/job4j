@@ -5,7 +5,6 @@ package ru.job4j.array;
  * @version $Id$
  * @since 18.07.18
  */
-
 public class MatrixCheck {
     /**
      * Необходимо проверить, что все элементы по диагоналям равны true или false.

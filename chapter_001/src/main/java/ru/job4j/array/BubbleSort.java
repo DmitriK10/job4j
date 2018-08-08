@@ -5,7 +5,6 @@ package ru.job4j.array;
  * @version $Id$
  * @since 02.04.18
  */
-
 public class BubbleSort {
     /**
      * Реализовать сортировку значений по возрастанию в массиве.
