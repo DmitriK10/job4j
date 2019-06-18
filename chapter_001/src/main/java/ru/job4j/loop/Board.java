@@ -17,7 +17,6 @@ public class Board {
         StringBuilder screen = new StringBuilder();
         String ln = System.lineSeparator();
         String str = "Привет";
-        int nest = 0;
         for (int j = 0; j < height; j++) {
             for (int i = 0; i < width; i++) {
                 // условие проверки, что писать пробел или X
@@ -27,7 +26,6 @@ public class Board {
                 } else {
                     screen.append(" ");
                 }
-                nest++;
             }
             screen.append(ln);
         }
