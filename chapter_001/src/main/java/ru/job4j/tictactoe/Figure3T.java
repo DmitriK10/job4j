@@ -1,13 +1,16 @@
+/*
 package ru.job4j.tictactoe;
 
 import javafx.scene.shape.Rectangle;
 
+*/
 /**
  * Класс TicTacToe - реализует визуальный компонент.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 23.07.18
- */
+ *//*
+
 public class Figure3T extends Rectangle {
     private boolean markX = false;
     private boolean markO = false;
@@ -33,3 +36,4 @@ public class Figure3T extends Rectangle {
         return this.markO;
     }
 }
+*/

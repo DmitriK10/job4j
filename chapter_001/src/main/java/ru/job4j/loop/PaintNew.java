@@ -1,6 +1,5 @@
 package ru.job4j.loop;
 
-import java.util.StringJoiner;
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
@@ -24,10 +23,10 @@ public class PaintNew {
     }
     public String leftTrl(int height) {
         StringBuilder screen = new StringBuilder();
-        int width = height;
+        //int width = height;
         for (int row = 0; row != height; row++) {
-            for (int column = 0; column != width; column++) {
-                if (row >= width- column - 1) {
+            for (int column = 0; column != height; column++) {
+                if (row >= height- column - 1) {
                     screen.append("^");
                 } else {
                     screen.append(" ");

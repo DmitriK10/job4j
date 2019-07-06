@@ -1,6 +1,5 @@
 package ru.job4j.array;
 
-import java.util.Arrays;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

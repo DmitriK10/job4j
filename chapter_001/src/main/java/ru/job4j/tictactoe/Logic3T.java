@@ -1,11 +1,14 @@
+/*
 package ru.job4j.tictactoe;
 
+*/
 /**
  * Класс Logic3T - проверка логики.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 23.07.18
- */
+ *//*
+
 public class Logic3T {
     private final Figure3T[][] table;
 
@@ -110,4 +113,4 @@ public class Logic3T {
         }
         return result;
     }
-}
+}*/

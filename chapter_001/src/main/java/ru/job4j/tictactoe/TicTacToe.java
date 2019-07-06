@@ -1,3 +1,4 @@
+/*
 package ru.job4j.tictactoe;
 
 import javafx.application.Application;
@@ -16,12 +17,14 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
+*/
 /**
  * Класс Figure3T - отвечает за клетку на поле.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 23.07.18
- */
+ *//*
+
 
 public class TicTacToe extends Application {
     private static final String JOB4J = "Крестики-нолики www.job4j.ru";
@@ -145,3 +148,4 @@ public class TicTacToe extends Application {
     }
 }
 
+*/
