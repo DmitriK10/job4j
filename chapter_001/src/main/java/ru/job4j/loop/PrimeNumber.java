@@ -7,10 +7,10 @@ package ru.job4j.loop;
  */
 public class PrimeNumber {
     /**
-     * посчитать количество простых чисел от 1 до x.
+     * посчитать количество простых чисел от 1 до finish.
      */
     public int calc(int finish) {
-        int count = 0;//finish > 2 ? 2: ;
+        int count = 0;
         int a = 0;
         for (int x = 1; x <= finish; x++) {
             for (int y = 1; y <= x; y++) {

@@ -1,7 +1,6 @@
 package ru.job4j.loop;
 
 import org.junit.Test;
-
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
@@ -23,7 +22,7 @@ public class PrimeNumberTest {
     @Test
     public void when1() {
         PrimeNumber prime = new PrimeNumber();
-        int count = prime.calc(2);
-        assertThat(count, is(1));
+        int count = prime.calc(29);
+        assertThat(count, is(10));
     }
 }
