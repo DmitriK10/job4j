@@ -1,6 +1,5 @@
 package ru.job4j.loop;
 
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
