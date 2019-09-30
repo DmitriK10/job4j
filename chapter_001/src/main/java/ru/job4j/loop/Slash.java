@@ -11,8 +11,8 @@ public class Slash {
         boolean right = false;
         for (int row = 0; row < size; row++) {
             for (int cell = 0; cell < size; cell++) {
-                left = (row ==  cell) ? true : false;
-                right = (row + cell) == size - 1 ? true : false;
+                left = row == cell;
+                right = (row + cell) == size - 1;
                 if (left) {
                     System.out.print("0");
                 } else if (right) {
