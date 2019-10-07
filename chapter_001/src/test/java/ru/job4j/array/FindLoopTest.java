@@ -41,12 +41,23 @@ public class FindLoopTest {
 
     @Test
     public void whenFind() {
-        int[] input = new int[] {5, 21, 1, 1, 4, -2, 200};
-        int value = 2;
+        int[] input = new int[] {500, 200, 100, 200, 400};
+        int value = 100;
         int start = 1;
-        int finish = 6;
+        int finish = 4;
         int result = FindLoop.indexOf(input, value, start, finish);
-        int expect = -1;
+        int expect = 2;
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenFind2() {
+        int[] input = new int[] {10, 10, 100, 200, 400, 1, 9, 99, 1000, 9};
+        int value = 10;
+        int start = 0;
+        int finish = 1;
+        int result = FindLoop.indexOf(input, value, start, finish);
+        int expect = 0;
         assertThat(result, is(expect));
     }
 }
