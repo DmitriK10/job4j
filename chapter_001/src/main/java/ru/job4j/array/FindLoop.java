@@ -9,7 +9,7 @@ public class FindLoop {
     /**
      * Реализовать поиск значения в дипазоне в массиве.
      * @param data массив чисел.
-     * @param el число поиска.
+     * @param el индекс поиска.
      * @return rst результат поиска.
      */
     public int indexOf(int[] data, int el) {
