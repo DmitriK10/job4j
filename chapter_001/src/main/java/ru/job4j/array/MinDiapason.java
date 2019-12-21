@@ -1,5 +1,4 @@
 package ru.job4j.array;
-
 /**
  * Поиск минимума в диапазоне.
  * @author DKupriyanyuk
