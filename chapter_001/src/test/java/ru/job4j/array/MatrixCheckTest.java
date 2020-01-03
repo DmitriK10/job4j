@@ -69,4 +69,27 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
+    @Test
+    public void whenHasMonoHorizontal() {
+        char[][] input = {
+                {' ', ' ', ' '},
+                {'X', 'X', 'X'},
+                {' ', ' ', ' '},
+        };
+        boolean result = MatrixCheck.monoHorizontal(input, 1);
+        assertThat(result, is(true));
+    }
+
+    @Test
+    public void whenHasMonoHorizontal2() {
+        char[][] input = {
+                {' ', ' ', ' '},
+                {' ', ' ', ' '},
+                {'X', 'X', 'X'},
+                {' ', ' ', ' '},
+        };
+        boolean result = MatrixCheck.monoHorizontal(input, 2);
+        assertThat(result, is(true));
+    }
 }
