@@ -24,6 +24,9 @@ public class MatrixCheck {
         return res;
     }
 
+    /*6.7.1. Моно строка в матрице. [#214126]
+     * нужно будет проверить, что строка в двухмерном массива целиком заполнена символом 'X'.
+     */
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
         for ( int i = 0; i < board[0].length; i++ ) {
@@ -35,6 +38,9 @@ public class MatrixCheck {
         return result;
     }
 
+    /*6.7.2. Моно столбец в матрице. [#214127]
+     * нужно сделать аналогичный метод, который будет проверять, что все элементы в колонки заполнены символом 'X'.
+     */
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
         for ( int i = 0; i < board.length; i++ ) {
@@ -42,6 +48,35 @@ public class MatrixCheck {
                 result = false;
                 break;
             }
+        }
+        return result;
+    }
+
+    //6.7.4. Выигрышные комбинации в сокобан [#53859]
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        int num = 0;
+        for ( int i = 0; i < 5; i++ ) {
+            for ( int y = 0; y < 5; y++ ) {
+                if ( board[y][i] == 'X') {
+                   num++;
+                }
+            }
+            if (num == 5) {
+                result = true;
+            }
+            num = 0;
+        }
+        for ( int i = 0; i < 5; i++ ) {
+            for ( int y = 0; y < 5; y++ ) {
+                if ( board[i][y] == 'X') {
+                    num++;
+                }
+            }
+            if (num == 5) {
+                result = true;
+            }
+            num = 0;
         }
         return result;
     }
