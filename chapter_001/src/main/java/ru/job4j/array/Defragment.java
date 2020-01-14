@@ -7,18 +7,11 @@ public class Defragment {
             String cell = array[index];
             i = 0;
             if (cell == null) {
-                while (array[index + i] == null) {
-                    if ((index + i) == (array.length - 1))
-                    {
-                        break;
-                    };
+                while ((array[index + i] == null) & ((index + i) != (array.length - 1))) {
                     i++;
                 }
                 array[index] = array[index + i];
                 array[index + i] = cell;
-            }
-            else {
-                continue;
             }
             System.out.print(array[index] + " ");
         }
