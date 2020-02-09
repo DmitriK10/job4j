@@ -17,14 +17,14 @@ public class EndsWith {
         boolean result = true;
         char[] pst = post.toCharArray();
         char[] wrd = word.toCharArray();
-        int Num = 0;
+        int num = 0;
         // проверить. что массив data имеет первые элементы одинаковые с value
        for (int i = wrd.length - pst.length; i < wrd.length; i++) {
-            if (wrd[i] != pst[Num] ) {
+            if (wrd[i] != pst[num]) {
                 result = false;
                 break;
             }
-            Num++;
+            num++;
         }
         return result;
     }

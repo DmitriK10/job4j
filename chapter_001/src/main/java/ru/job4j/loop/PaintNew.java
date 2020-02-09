@@ -10,8 +10,8 @@ public class PaintNew {
         StringBuilder screen = new StringBuilder();
         String ln = System.lineSeparator();
         for (int height = 0; height != h; height++) {
-            for (int width = 0; width != h*2-1; width++) {
-                if (height >= h- width - 1 && width <= height + h - 1) {
+            for (int width = 0; width != h * 2 - 1; width++) {
+                if (height >= h - width - 1 && width <= height + h - 1) {
                     screen.append("^");
                 } else {
                     screen.append(" ");
@@ -26,7 +26,7 @@ public class PaintNew {
         //int width = height;
         for (int row = 0; row != height; row++) {
             for (int column = 0; column != height; column++) {
-                if (row >= height- column - 1) {
+                if (row >= height - column - 1) {
                     screen.append("^");
                 } else {
                     screen.append(" ");
@@ -38,7 +38,7 @@ public class PaintNew {
     }
     public String pyramid(int height) {
         StringBuilder screen = new StringBuilder();
-        int width= 2 * height - 1;
+        int width = 2 * height - 1;
         for (int row = 0; row != height; row++) {
             for (int column = 0; column != width; column++) {
                 if (row >= height - column - 1 && row + height - 1 >= column) {

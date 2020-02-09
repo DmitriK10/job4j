@@ -12,7 +12,7 @@ public class Turn {
      * @return array перевёрнутый массив.
      */
     public int[] turn(int[] array) {
-        for (int i = 0; i < array.length/2; i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             int tempData = array[array.length - 1 - i];
             array[array.length - 1 - i] = array[i];
             array[i] = tempData;

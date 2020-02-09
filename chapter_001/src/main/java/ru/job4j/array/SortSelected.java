@@ -14,7 +14,7 @@ public class SortSelected {
             int index = FindLoop.indexOf(data, min, i, data.length);
             int tmp = data[i];
             data[i] = data[index];
-            data[index] = data [i];
+            data[index] = data[i];
         }
         return data;
     }
