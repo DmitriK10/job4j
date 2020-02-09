@@ -9,10 +9,11 @@ import java.util.Arrays;
  * @since 10.04.18
  */
 public class ArrayDuplicate {
+    /** @noinspection checkstyle:WhitespaceAfter*/
     public String[] remove(String[] array) {
         int tmp = 1;
         for (int i = 0; i < array.length - tmp; i++) {
-            for (int y = i + 1; y < array.length - tmp; y++){
+            for (int y = i + 1; y < array.length - tmp; y++) {
                 if (array[i].equals(array[y])) {
                     String tempStr = array[array.length - tmp];
                     array[array.length - tmp] = array[y];
@@ -21,6 +22,6 @@ public class ArrayDuplicate {
                 }
             }
         }
-        return  Arrays.copyOf(array,array.length - tmp + 1);
+        return  Arrays.copyOf(array, array.length - tmp + 1);
     }
 }
