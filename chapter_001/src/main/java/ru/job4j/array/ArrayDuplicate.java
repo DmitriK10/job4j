@@ -21,6 +21,6 @@ public class ArrayDuplicate {
                 }
             }
         }
-        return  Arrays.copyOf(array,array.length - tmp + 1));
+        return  Arrays.copyOf(array,array.length - tmp + 1);
     }
 }
