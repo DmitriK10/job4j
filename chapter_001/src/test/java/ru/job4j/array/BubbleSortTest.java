@@ -15,9 +15,9 @@ public class BubbleSortTest {
 
     @Test
     public void whenBubbleSortArrayWithEvenAmountOfElementsThenSortedArray() {
-        BubbleSort BubbleSort = new BubbleSort();
+        BubbleSort bubbleSort = new BubbleSort();
         int[] input = new int[] {5, 1, 2, 7, 4};
-        int[] result = BubbleSort.bubblesort(input);
+        int[] result = bubbleSort.bubblesort(input);
         int[] expect = new int[] {1, 2, 4, 5, 7};
         assertThat(result, is(expect));
     }
@@ -25,10 +25,10 @@ public class BubbleSortTest {
     @Test
     public void whenBubbleSortArrayArrayWithOddAmountOfElementsThenSortedArray() {
         //напишите здесь тест, сортирующий массив с чётным числом элементов, например {5, 1, 1, 4, 4, 1, 2, 0}.
-        BubbleSort BubbleSort = new BubbleSort();
+        BubbleSort bubbleSort = new BubbleSort();
         int[] input = new int[] {5, 1, 1, 4, 4, 1, 2, 0};
-        int[] result = BubbleSort.bubblesort(input);
-        int[] expect = new int[] {0,1, 1, 1, 2, 4, 4, 5};
+        int[] result = bubbleSort.bubblesort(input);
+        int[] expect = new int[] {0, 1, 1, 1, 2, 4, 4, 5};
         assertThat(result, is(expect));
     }
 }

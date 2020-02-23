@@ -1,4 +1,3 @@
-/*
 package ru.job4j.tictactoe;
 
 import org.junit.Test;
@@ -39,4 +38,4 @@ public class Logic3TTest {
         Logic3T login = new Logic3T(table);
         assertThat(login.hasGap(), is(true));
     }
-}*/
+}

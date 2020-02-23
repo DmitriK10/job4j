@@ -1,13 +1,12 @@
-/*
+
 package ru.job4j.tictactoe;
 
-*/
 /**
  * Класс Logic3T - проверка логики.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 23.07.18
- *//*
+ */
 
 public class Logic3T {
     private final Figure3T[][] table;
@@ -20,11 +19,11 @@ public class Logic3T {
         boolean result = false;
         // проверка выигрышной комбинации для крестиков на горизонталям игрового поля
         for (Figure3T[] aTable : table) {
-            int NumX = 0;
+            int numX = 0;
             for (int j = 0; j < table.length; j++) {
                 if (aTable[j].hasMarkX()) {
-                    NumX++;
-                    if (NumX == 3) {
+                    numX++;
+                    if (numX == 3) {
                         result = true;
                         break;
                     }
@@ -33,11 +32,11 @@ public class Logic3T {
         }
         // проверка выигрышной комбинации для крестиков по вертикалям игрового поля
         for (int j = 0; j < table.length; j++) {
-            int NumX = 0;
+            int numX = 0;
             for (Figure3T[] aTable : table) {
                 if (aTable[j].hasMarkX()) {
-                    NumX++;
-                    if (NumX == 3) {
+                    numX++;
+                    if (numX == 3) {
                         result = true;
                         break;
                     }
@@ -45,11 +44,11 @@ public class Logic3T {
             }
         }
         // проверка выигрышной комбинации для крестиков диагоналях игрового поля
-        int NumX = 0;
+        int numX = 0;
         for (int i = 0; i < table.length; i++) {
             if ((table[i][i].hasMarkX()) || (table[table.length - i - 1][i].hasMarkX())) {
-                NumX++;
-                if (NumX == 3) {
+                numX++;
+                if (numX == 3) {
                     result = true;
                     break;
                 }
@@ -63,11 +62,11 @@ public class Logic3T {
         // проверка выигрышной комбинации для ноликов на горизонталям игрового поля
         boolean result = false;
         for (Figure3T[] aTable : table) {
-            int NumX = 0;
+            int numX = 0;
             for (int j = 0; j < table.length; j++) {
                 if (aTable[j].hasMarkO()) {
-                    NumX++;
-                    if (NumX == 3) {
+                    numX++;
+                    if (numX == 3) {
                         result = true;
                         break;
                     }
@@ -76,11 +75,11 @@ public class Logic3T {
         }
         // проверка выигрышной комбинации для ноликов вертикалям
         for (int j = 0; j < table.length; j++) {
-            int NumX = 0;
+            int numX = 0;
             for (Figure3T[] aTable : table) {
                 if (aTable[j].hasMarkO()) {
-                    NumX++;
-                    if (NumX == 3) {
+                    numX++;
+                    if (numX == 3) {
                         result = true;
                         break;
                     }
@@ -88,11 +87,11 @@ public class Logic3T {
             }
         }
         // проверка выигрышной комбинации для ноликов на диагоналях игрового поля
-        int NumX = 0;
+        int numX = 0;
         for (int i = 0; i < table.length; i++) {
             if ((table[i][i].hasMarkO()) || (table[table.length - i - 1][i].hasMarkO()))  {
-                NumX++;
-                if (NumX == 3) {
+                numX++;
+                if (numX == 3) {
                     result = true;
                     break;
                 }
@@ -113,4 +112,4 @@ public class Logic3T {
         }
         return result;
     }
-}*/
+}
