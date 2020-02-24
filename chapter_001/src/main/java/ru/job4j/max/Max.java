@@ -1,5 +1,4 @@
 package ru.job4j.max;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
@@ -15,8 +14,6 @@ public class Max {
     public int max(int first, int second) {
         return first > second ? first : second;
     }
-
-
  /**
   * Ищем большее из трех чисел.
   * @param first первое число.

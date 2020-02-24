@@ -1,5 +1,4 @@
 package ru.job4j.condition;
-
 /**
  * Расстояние между двумя точками.
  * @author DKupriyanyuk

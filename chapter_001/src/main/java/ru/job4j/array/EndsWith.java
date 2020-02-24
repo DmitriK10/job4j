@@ -1,5 +1,4 @@
 package ru.job4j.array;
-
 /**
  * Обертка над строкой.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
@@ -7,7 +6,6 @@ package ru.job4j.array;
  * @since 23.09.18
  */
 public class EndsWith {
-
     /**
      * Проверяет. что слово заканчивается на префикс.
      * @param post префикс.

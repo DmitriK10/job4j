@@ -1,11 +1,9 @@
 package ru.job4j.loop;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 26.03.18
  */
-
 public class Board {
     /**
      * Строим шахматную доску символом Х по заданным: ширине и высоте

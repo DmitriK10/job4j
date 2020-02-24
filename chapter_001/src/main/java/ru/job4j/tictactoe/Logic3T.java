@@ -1,20 +1,15 @@
-
 package ru.job4j.tictactoe;
-
 /**
  * Класс Logic3T - проверка логики.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 23.07.18
  */
-
 public class Logic3T {
     private final Figure3T[][] table;
-
     public Logic3T(Figure3T[][] table) {
         this.table = table;
     }
-
     public boolean isWinnerX() {
         boolean result = false;
         // проверка выигрышной комбинации для крестиков на горизонталям игрового поля
@@ -56,8 +51,6 @@ public class Logic3T {
         }
         return result;
     }
-
-
     public boolean isWinnerO() {
         // проверка выигрышной комбинации для ноликов на горизонталям игрового поля
         boolean result = false;
@@ -99,7 +92,6 @@ public class Logic3T {
         }
         return result;
     }
-
     public boolean hasGap() {
         // проверка наличия пустых клеток для нового хода
         boolean result = false;

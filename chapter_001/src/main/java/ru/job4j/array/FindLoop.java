@@ -1,5 +1,4 @@
 package ru.job4j.array;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
@@ -10,7 +9,7 @@ public class FindLoop {
      * Реализовать поиск значения в дипазоне в массиве.
      * @param data массив чисел.
      * @param el индекс поиска.
-     * @return rst результат поиска.
+     * @return rst результат поиска,  если элемента нет в массиве, то возвращаем -1.
      */
     public int indexOf(int[] data, int el) {
         int rst = -1; // если элемента нет в массиве, то возвращаем -1.
@@ -22,9 +21,8 @@ public class FindLoop {
         }
         return rst;
     }
-
     public static int indexOf(int[] data, int el, int start, int finish) {
-        int rst = -1; // если элемента нет в массиве, то возвращаем -1.
+        int rst = -1;
         for (int aData = start; aData <= finish; aData++) {
             if (data[aData] == el) {
                 rst = aData;

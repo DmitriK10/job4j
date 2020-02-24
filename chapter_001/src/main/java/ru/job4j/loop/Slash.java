@@ -1,10 +1,8 @@
 package ru.job4j.loop;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 18.09.19 */
-
 public class Slash {
     public static void draw(int size) {
         boolean left = false;
@@ -25,7 +23,6 @@ public class Slash {
         }
         System.out.println();
     }
-
     public static void main(String[] args) {
         System.out.println("Draw by 3");
         draw(3);

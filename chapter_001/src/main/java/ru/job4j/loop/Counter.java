@@ -1,11 +1,9 @@
 package ru.job4j.loop;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 21.03.18
  */
-
 public class Counter {
     /**
      * Ищем сумму чисел в диапазоне от start до finish

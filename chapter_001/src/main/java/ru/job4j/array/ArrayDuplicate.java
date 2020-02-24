@@ -1,7 +1,5 @@
 package ru.job4j.array;
-
 import java.util.Arrays;
-
 /**
  * Удаление дубликатов в массиве.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
@@ -9,7 +7,6 @@ import java.util.Arrays;
  * @since 10.04.18
  */
 public class ArrayDuplicate {
-    /** @noinspection checkstyle:WhitespaceAfter*/
     public String[] remove(String[] array) {
         int tmp = 1;
         for (int i = 0; i < array.length - tmp; i++) {

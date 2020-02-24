@@ -1,5 +1,4 @@
 package ru.job4j.calculator;
-
 /**
  * Корвертор валюты.
  * @author DKupriyanyuk
@@ -16,7 +15,6 @@ public class Converter {
         value = value / 70;
         return value;
     }
-
     /**
      * Конвертируем рубли в доллары.
      * @param value рубли.

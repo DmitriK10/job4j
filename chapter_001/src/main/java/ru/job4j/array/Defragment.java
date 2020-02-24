@@ -1,5 +1,9 @@
 package ru.job4j.array;
-
+/**
+ * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
+ * @version $Id$
+ * @since 11.01.19
+ */
 public class Defragment {
     public static String[] compress(String[] array) {
         int i = 0;
@@ -17,7 +21,6 @@ public class Defragment {
         }
         return array;
     }
-
     public static void main(String[] args) {
         String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
         String[] compressed = compress(input);

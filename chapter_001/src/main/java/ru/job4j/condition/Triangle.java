@@ -1,5 +1,4 @@
 package ru.job4j.condition;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
@@ -9,7 +8,6 @@ public class Triangle {
     private Point a;
     private Point b;
     private Point c;
-
     public Triangle(Point a, Point b, Point c) {
         this.a = a;
         this.b = b;
@@ -25,7 +23,6 @@ public class Triangle {
     public double period(double ab, double ac, double bc) {
         return (ab + ac + bc) / 2;
     }
-
     /**
      * Метод должен вычислить площадь треугольника.
      * @return Вернуть прощадь, если треугольник существует или -1, если треугольника нет.
@@ -41,7 +38,6 @@ public class Triangle {
         }
         return rsl;
     }
-
     /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
      * @param ab Длина от точки a b.

@@ -1,5 +1,4 @@
 package ru.job4j.array;
-
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
@@ -23,7 +22,6 @@ public class MatrixCheck {
         }
         return res;
     }
-
     /*6.7.1. Моно строка в матрице. [#214126]
      * нужно будет проверить, что строка в двухмерном массива целиком заполнена символом 'X'.
      */
@@ -37,7 +35,6 @@ public class MatrixCheck {
         }
         return result;
     }
-
     /*6.7.2. Моно столбец в матрице. [#214127]
      * нужно сделать аналогичный метод, который будет проверять, что все элементы в колонки заполнены символом 'X'.
      */
@@ -51,7 +48,6 @@ public class MatrixCheck {
         }
         return result;
     }
-
     //6.7.4. Выигрышные комбинации в сокобан [#53859]
     public static boolean isWin(char[][] board) {
         boolean result = false;
