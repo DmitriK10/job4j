@@ -1,5 +1,8 @@
 package ru.job4j.oop;
-
+/**
+ * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
+ * @version $Id$
+ * @since 09.03.19 */
 public class BallStory {
     public static void main(String[] args) {
         Ball ball = new Ball();

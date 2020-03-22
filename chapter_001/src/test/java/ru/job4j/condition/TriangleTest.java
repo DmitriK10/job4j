@@ -26,9 +26,14 @@ public class TriangleTest {
         assertThat(result, closeTo(expected, 0.1));
     }*/
 
-    @Test
+   @Test
     public void whenExist() {
-        boolean result = Triangle.exist(2.0, 2.0, 2.0);
-        assertThat(result, is(true));
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        Point c = new Point(2, 0);
+        Triangle triangle = new Triangle(a, b, c);
+        double result = triangle.area();
+        double expected = 2D;
+        assertThat(result, closeTo(expected, 0.1));
     }
 }

@@ -63,12 +63,13 @@ public class Triangle {
      * @param a Длина от точки a b.
      * @param b Длина от точки a c.
      * @param c Длина от точки b c.
-     * @return
+     * @return true если существует
      */
-    private boolean exist(double a, double c, double b) {
+    private boolean exist(double a, double b, double c) {
         return (a < b + c) & (b < a + c) & (c < a + b);
     }
 }
+
 /*
 package ru.job4j.condition;
 
@@ -76,7 +77,7 @@ package ru.job4j.condition;
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 14.03.18
- *//*
+ *
 
 public class Triangle {
     private Point a;
@@ -87,23 +88,22 @@ public class Triangle {
         this.b = b;
         this.c = c;
     }
-    */
-/**
+
+    /**
      * Метод вычисления полупериметра по длинам сторон.
      * @param ab расстояние между точками a b
      * @param ac расстояние между точками a c
      * @param bc расстояние между точками b c
      * @return Перимент.
-     *//*
+     *
 
     public double period(double ab, double ac, double bc) {
         return (ab + ac + bc) / 2;
     }
-    */
-/**
+
+    /**
      * Метод должен вычислить площадь треугольника.
-     * @return Вернуть прощадь, если треугольник существует или -1, если треугольника нет.
-     *//*
+     * @return Вернуть прощадь, если треугольник существует или -1, если т
 
     public double area() {
         double rsl = -1;
@@ -116,14 +116,14 @@ public class Triangle {
         }
         return rsl;
     }
-    */
-/**
+
+    /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
      * @param ab Длина от точки a b.
      * @param ac Длина от точки a c.
      * @param bc Длина от точки b c.
      * @return true or false
-     *//*
+     *
 
     private boolean exist(double ab, double ac, double bc) {
         return (ab < bc + ac) & (bc < ab + ac) & (ac < ab + bc);
