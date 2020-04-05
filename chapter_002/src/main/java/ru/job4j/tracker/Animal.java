@@ -2,12 +2,22 @@ package ru.job4j.tracker;
 
 public class Animal {
 
-    public Animal() {
+/*    public Animal() {
         super();
         System.out.println("Class Animal");
     }
 
     public static void main(String[] args) {
         Predator predator = new Predator();
+    }*/
+
+    public Animal() {
+    }
+
+    public Animal(String name) {
+    }
+
+    public static void main(String[] args) {
+        Animal animal = new Animal();
     }
 }
