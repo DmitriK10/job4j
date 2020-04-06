@@ -12,6 +12,8 @@ public class Animal {
     }*/
 
     public Animal() {
+        super();
+        System.out.println("Class Animal");
     }
 
     public Animal(String name) {
