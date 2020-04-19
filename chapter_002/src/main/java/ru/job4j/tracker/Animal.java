@@ -2,14 +2,14 @@ package ru.job4j.tracker;
 
 public class Animal {
 
-    private String name, name2, name3;
+    String name = "Dog";
 
     public Animal() {
         System.out.println("Class Animal");
     }
 
     public Animal(String name) {
-        this.name = name;
+        name = this.name;
         System.out.println("Class Animal name " + name);
     }
 
