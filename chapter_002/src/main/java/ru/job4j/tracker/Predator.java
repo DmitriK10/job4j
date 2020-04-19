@@ -1,5 +1,10 @@
 package ru.job4j.tracker;
-
+/**
+ * Класс Predator.
+ * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
+ * @version $Id$
+ * @since 18.04.20
+ */
 public class Predator extends Animal {
     String name2;
 
