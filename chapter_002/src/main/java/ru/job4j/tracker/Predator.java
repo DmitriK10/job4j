@@ -1,4 +1,5 @@
 package ru.job4j.tracker;
+
 /**
  * Класс Predator.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
