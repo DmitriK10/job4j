@@ -14,15 +14,15 @@ public class Tiger extends Predator {
         System.out.println("Class Tiger");
     }
 
-    public Tiger(String name, String name2, String name3) {
-        super(name, name2);
+    public Tiger(String name) { //}, String name2, String name3) {
+        super(name);
         this.name3 = name3;
         System.out.println("Class Tiger roar " + name3);
     }
 
     public static void main(String[] args) {
         Tiger tiger = new Tiger();
-        Tiger tiger2 = new Tiger("", "Woo-woo","R-r-r");
+        Tiger tiger2 = new Tiger("", "R-r-r");
     }
 }
 
