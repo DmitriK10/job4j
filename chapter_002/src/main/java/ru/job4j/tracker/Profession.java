@@ -3,10 +3,10 @@ package ru.job4j.tracker;
 import java.util.Date;
 
 public class Profession {
-    private String name;
-    private String surname;
-    private String education;
-    private Date birthday;
+    String name;
+    String surname;
+    String education;
+    Date birthday;
 
     public String getName() {
         return name;
@@ -17,21 +17,13 @@ public class Profession {
     }
 
     public String getEducation() {
-        return education;
-    }
+        return education; }
 
     public Date getbirthday() {
         return birthday;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Profession() {
-    }
-
-    public Profession(String name) {
     }
 
     public static void main(String[] args) {
@@ -39,3 +31,4 @@ public class Profession {
     }
 
 }
+
