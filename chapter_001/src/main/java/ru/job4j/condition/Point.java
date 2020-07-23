@@ -5,16 +5,14 @@ import static java.lang.Math.pow;
 /**
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
- * @since 22.07.20
+ * @since 23.07.20
  * ООП вариант
  **/
 
 public class Point {
 
     private int x;
-
     private int y;
-
     private int z;
 
     /*
