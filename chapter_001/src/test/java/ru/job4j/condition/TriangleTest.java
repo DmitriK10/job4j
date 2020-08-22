@@ -1,15 +1,19 @@
+/*
 package ru.job4j.condition;
 
 import org.junit.Test;
 import static org.hamcrest.number.IsCloseTo.closeTo;
 import static org.junit.Assert.*;
+*/
 /**
  * Class TriangleTest.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
  * @version $Id$
  * @since 20.03.20
- */
+ *//*
+
 public class TriangleTest {
+*/
 /*   @Test
     public void whenAreaSetThreePointsThenTriangleArea() {
         // создаем три объекта класса Point.
@@ -24,7 +28,8 @@ public class TriangleTest {
         double expected = 2D;
         //Проверяем результат и ожидаемое значение.
         assertThat(result, closeTo(expected, 0.1));
-    }*/
+    }*//*
+
 
    @Test
     public void whenExist() {
@@ -37,3 +42,4 @@ public class TriangleTest {
         assertThat(result, closeTo(expected, 0.1));
     }
 }
+*/

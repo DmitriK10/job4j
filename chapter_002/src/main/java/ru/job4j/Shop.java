@@ -1,3 +1,40 @@
+/*
+package ru.job4j.pojo;
+
+public class Shop {
+    public static int main(String[] args) {
+        Product products[] = new Product[5];
+        products[0] = new Product("Milk", 10);
+        products[1] = new Product("Bread", 4);
+        products[2] = new Product("Egg", 19);
+        for (int i = 0; i < products.length; i++) {
+            Product product = products[i];
+            */
+/* проверяем, что объект не равен null. Т.к. у нас массив не заполнен целиком. *//*
+
+            if (product != null) {
+                System.out.println(product.getName());
+            }
+        }
+
+        public static int indexOfNull(Product products[]) {
+           // products[] = null;
+            int index = 1;
+            for ( int i = 1; i < products.length; i++ ) {
+                Product product = products[i];
+                if (product == null && i < products.length - 1) {
+                    products[i] = products[i + 1];
+                    products[i + 1] = null;
+                }
+            }
+            return index;
+        }
+    }
+
+}
+*/
+
+/*
 package ru.job4j.pojo;
 
 public class Shop {
@@ -8,6 +45,7 @@ public class Shop {
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
 
+*/
 /*        public Product[] delete(Product[] products, int index) {
             products[index] = null;
             for ( int i = 1; i < products.length; i++ ) {
@@ -18,7 +56,8 @@ public class Shop {
                 }
             }
             return products;
-        };*/
+        };*//*
+
 
         for (int i = 0; i < products.length; i++) {
             Product product = products[i];
@@ -63,3 +102,4 @@ public class Shop {
 
     }
 }
+*/
