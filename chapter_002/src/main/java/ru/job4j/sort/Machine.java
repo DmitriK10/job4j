@@ -4,11 +4,11 @@ import java.util.Arrays;
 /**
  *Class Machine
  *@author DKupriyanyuk
- *@version 1
+ *@version 1.00
  *@since 21.08.2020
  */
 public class Machine {
-    static final int[] COINS = {10, 5, 2, 1};
+    private static final int[] COINS = {10, 5, 2, 1};
 
     public int[] change(int money, int price) {
         int[] rsl = new int[100];
