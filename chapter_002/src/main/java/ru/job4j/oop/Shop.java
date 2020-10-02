@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class Shop {
+public final class Shop {
     public static void main(String[] args) {
         Product product = of("Oil", 100);
         System.out.println(product.label());
