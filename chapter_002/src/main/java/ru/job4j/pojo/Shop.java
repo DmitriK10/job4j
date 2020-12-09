@@ -1,6 +1,5 @@
 package ru.job4j.pojo;
 
-/** @noinspection ALL*/
 public class Shop {
 
     public static void main(String[] args) {
