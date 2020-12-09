@@ -5,7 +5,9 @@ import java.util.Arrays;
 /*5. Tracker - хранилище [#396]
  */
 public class StartUI {
-    /** @noinspection checkstyle:NoWhitespaceBefore*/
+    /**
+     * @noinspection checkstyle:NoWhitespaceBefore
+     */
     public static void main(String[] args) {
         String[] names = {"Petr", null, "Ivan", "Stepan", null};
         String[] namesWithoutNull = new String[names.length];
@@ -19,15 +21,19 @@ public class StartUI {
         }
         namesWithoutNull = Arrays.copyOf(namesWithoutNull, sizeA);
         Tracker tracker = new Tracker();
-        Item item = new Item();
+        System.out.println("-----Add-------");
         for (int index = 0; index < namesWithoutNull.length; index++) {
+            Item item = new Item();
             item.setId(index);
             item.setName(namesWithoutNull[index]);
             tracker.add(item);
-     //       System.out.println(item.getName());
         }
+        System.out.println("-----findAll-------");
         tracker.findAll();
-       // tracker.findByName(item.getName());
+        System.out.println("-----findByName-------");
+        tracker.findByName("Ivan");
+        System.out.println("-----findById 1-------");
+        System.out.println(tracker.findById(1));
 
     }
 }

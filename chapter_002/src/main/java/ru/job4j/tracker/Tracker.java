@@ -21,7 +21,7 @@ public class Tracker {
         String itemsStr = "";
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i <= size; i++) {
             Item item = items[i];
             if (items[i] != null) {
                 System.out.println(items[i].getName());
@@ -34,11 +34,17 @@ public class Tracker {
 
     public Item findById(int id) {
         Item rsl = null;
-        for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                rsl = item;
-                break;
+        Item[] itemsWithoutNull = new Item[this.items.length];
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            Item item = this.items[i];
+            if ((this.items[i] != null)) {
+                if (item.getId() == (id)) {
+                    itemsWithoutNull[count] = this.items[i];
+                    System.out.println(item.getName());
+                    rsl = this.items[i];
+                    break;
+                }
             }
         }
         return rsl;
@@ -52,13 +58,18 @@ public class Tracker {
             if ((this.items[i] != null)) {
                 if (item.getName().equals(name)) {
                     itemsWithoutNull[count] = this.items[i];
+                    System.out.println(itemsWithoutNull[count]);
                     count++;
                 }
             }
         }
         return Arrays.copyOf(itemsWithoutNull, count);
+
     }
 }
+/*5. Tracker - хранилище [#396]
+ end */
+
 
 /*package ru.job4j.tracker;
 
