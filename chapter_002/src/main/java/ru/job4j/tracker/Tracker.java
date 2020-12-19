@@ -2,9 +2,100 @@ package ru.job4j.tracker;
 
 import java.util.Arrays;
 
-/*5. Tracker - хранилище [#396]
+/*6. Метод замены заявки. tracker.replace [#211748]
  */
 public class Tracker {
+    private final Item[] items = new Item[100];
+    private int ids = 1;
+    private int size = 0;
+    private  int position = 0;
+
+    //    добавление нового item
+    public Item add(Item item) {
+        size = ids;
+        items[size] = item;
+        //System.out.println(items[ids].getName() + " " + size);
+        item.setId(ids++);
+        return item;
+    }
+
+    //    получение списка всех item
+    public Item[] findAll() {
+        String itemsStr = "";
+        Item[] itemsWithoutNull = new Item[this.items.length];
+        int count = 0;
+        for (int i = 0; i <= size; i++) {
+            Item item = items[i];
+            if (items[i] != null) {
+                System.out.println(items[i].getName());
+                itemsWithoutNull[count] = this.items[i];
+                count++;
+            }
+        }
+        return Arrays.copyOf(itemsWithoutNull, count);
+    }
+
+    //    поиск item по id
+    public Item findById(int id) {
+        /* Находим индекс */
+        int index = indexOf(id);
+        /* Если индекс найден возвращаем item, иначе null */
+        return index != -1 ? items[index] : null;
+    }
+
+
+    private int indexOf(int id) {
+        int rsl = -1;
+        for (int index = 0; index <= size; index++) {
+            if (items[index] != null) {
+                if (items[index].getId() == id) {
+                    rsl = index;
+                    break;
+                }
+            }
+        }
+        return rsl;
+    }
+
+    public boolean replace(int id, Item item) {
+        Item newitem = findById(id);
+        boolean result = false;
+        if (item == null) {
+            return result;
+        } else {
+            newitem.setName(item.getName());
+            newitem.setId(id);
+            result = true;
+        }
+        return result;
+    }
+
+    //    получение списка по имени
+    public Item[] findByName(String name) {
+        Item[] itemsWithoutNull = new Item[this.items.length];
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            Item item = this.items[i];
+            if ((this.items[i] != null)) {
+                if (item.getName().equals(name)) {
+                    itemsWithoutNull[count] = this.items[i];
+                    System.out.println(itemsWithoutNull[count]);
+                    count++;
+                }
+            }
+        }
+        return Arrays.copyOf(itemsWithoutNull, count);
+
+    }
+}
+
+
+/*5. tracker - хранилище [#396]
+ end */
+
+/*5. tracker - хранилище [#396]
+
+public class tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
@@ -67,13 +158,13 @@ public class Tracker {
 
     }
 }
-/*5. Tracker - хранилище [#396]
+/*5. tracker - хранилище [#396]
  end */
 
 
 /*package ru.job4j.tracker;
 
-public class Tracker {
+public class tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
@@ -107,7 +198,7 @@ package ru.job4j.tracker;
  * @since 0.1
  *//*
 
-public class Tracker {
+public class tracker {
     */
 /**
      * Массив для хранение заявок.
