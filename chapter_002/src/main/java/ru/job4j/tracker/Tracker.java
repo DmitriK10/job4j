@@ -32,7 +32,7 @@ public class Tracker {
                 count++;
             }
         }
-        return Arrays.copyOf(itemsWithoutNull, count);
+        return Arrays.copyOf(items, size);
     }
 
     //    поиск item по id
@@ -58,13 +58,13 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        Item newitem = findById(id);
+        int index = indexOf(id);
         boolean result = false;
-        if (item == null) {
+        if (items[index] == null) {
+            System.out.println("Элемент " + id + " не найден!");
             return result;
         } else {
-            newitem.setName(item.getName());
-            newitem.setId(id);
+        items[index].setName(item.getName());
             result = true;
         }
         return result;
@@ -76,16 +76,13 @@ public class Tracker {
         int count = 0;
         for (int i = 0; i < size; i++) {
             Item item = this.items[i];
-            if ((this.items[i] != null)) {
-                if (item.getName().equals(name)) {
-                    itemsWithoutNull[count] = this.items[i];
-                    System.out.println(itemsWithoutNull[count]);
-                    count++;
-                }
+            if (item.getName().equals(name)) {
+                itemsWithoutNull[count] = this.items[i];
+                System.out.println(itemsWithoutNull[count]);
+                count++;
             }
         }
         return Arrays.copyOf(itemsWithoutNull, count);
-
     }
 }
 

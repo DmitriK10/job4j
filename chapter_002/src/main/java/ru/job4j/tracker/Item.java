@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-/*5. Tracker - хранилище [#396]
+/*5. tracker - хранилище [#396]
 **
 **
  */
