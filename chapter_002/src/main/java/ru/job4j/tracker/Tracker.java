@@ -21,7 +21,7 @@ public class Tracker {
 
     //    получение списка всех item
     public Item[] findAll() {
-        String itemsStr = "";
+/*      String itemsStr = "";
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
         for (int i = 0; i <= size; i++) {
@@ -31,7 +31,7 @@ public class Tracker {
                 itemsWithoutNull[count] = this.items[i];
                 count++;
             }
-        }
+        }*/
         return Arrays.copyOf(items, size);
     }
 
@@ -60,14 +60,13 @@ public class Tracker {
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
         boolean result = false;
-        if (items[index] == null) {
+        if (index == -1) {
             System.out.println("Элемент " + id + " не найден!");
             return result;
-        } else {
-        items[index].setName(item.getName());
-            result = true;
         }
-        return result;
+        item.setId(id); // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
+        items[index] = item; // делаем вставку
+        return true;
     }
 
     //    получение списка по имени
@@ -75,11 +74,13 @@ public class Tracker {
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
         for (int i = 0; i < size; i++) {
-            Item item = this.items[i];
-            if (item.getName().equals(name)) {
-                itemsWithoutNull[count] = this.items[i];
-                System.out.println(itemsWithoutNull[count]);
-                count++;
+             Item item = this.items[i];
+             if (this.items[i] != null) {
+                 if (item.getName().equals(name)) {
+                    itemsWithoutNull[count] = this.items[i];
+                    System.out.println(itemsWithoutNull[count]);
+                    count++;
+                }
             }
         }
         return Arrays.copyOf(itemsWithoutNull, count);
