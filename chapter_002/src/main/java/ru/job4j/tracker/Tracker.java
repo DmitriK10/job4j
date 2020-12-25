@@ -56,11 +56,11 @@ public class Tracker {
     public Item[] findByName(String name) {
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
-        for (int i = 1; i < size; i++) {
+        for (int i = 0; i < size; i++) {
              Item item = this.items[i];
              if (item.getName().equals(name)) {
                  itemsWithoutNull[count] = this.items[i];
-                 System.out.println(itemsWithoutNull[count]);
+                 System.out.println(itemsWithoutNull[count].getName());
                  count++;
              }
         }
