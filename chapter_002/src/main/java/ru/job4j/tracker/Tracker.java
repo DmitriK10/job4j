@@ -9,19 +9,19 @@ public class Tracker {
     private int ids = 1;
     private int size = 0;
 
-    //    добавление нового item
+    //  добавление нового item
     public Item add(Item item) {
         item.setId(ids++);
         items[size++] = item;
         return item;
     }
 
-    //    получение списка всех item
+    //  получение списка всех item
     public Item[] findAll() {
         return Arrays.copyOf(items, size);
     }
 
-    //    поиск item по id
+    //  поиск item по id
     public Item findById(int id) {
         //* Находим индекс *//*
         int index = indexOf(id);
@@ -29,6 +29,7 @@ public class Tracker {
         return index != -1 ? items[index] : null;
     }
 
+    //  метод  возвращает index по id.
     private int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < size; index++) {
@@ -40,6 +41,7 @@ public class Tracker {
         return rsl;
     }
 
+    //  метод заменяет заявку.
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
         boolean result = false;
@@ -52,7 +54,7 @@ public class Tracker {
         return true;
     }
 
-    //    получение списка по имени
+    //  получение списка по имени
     public Item[] findByName(String name) {
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
