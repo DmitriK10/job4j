@@ -8,50 +8,33 @@ public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
-    private  int position = 0;
 
     //    добавление нового item
     public Item add(Item item) {
-        size = ids;
-        items[size] = item;
-        //System.out.println(items[ids].getName() + " " + size);
         item.setId(ids++);
+        items[size++] = item;
         return item;
     }
 
     //    получение списка всех item
     public Item[] findAll() {
-/*      String itemsStr = "";
-        Item[] itemsWithoutNull = new Item[this.items.length];
-        int count = 0;
-        for (int i = 0; i <= size; i++) {
-            Item item = items[i];
-            if (items[i] != null) {
-                System.out.println(items[i].getName());
-                itemsWithoutNull[count] = this.items[i];
-                count++;
-            }
-        }*/
         return Arrays.copyOf(items, size);
     }
 
     //    поиск item по id
     public Item findById(int id) {
-        /* Находим индекс */
+        //* Находим индекс *//*
         int index = indexOf(id);
-        /* Если индекс найден возвращаем item, иначе null */
+        //* Если индекс найден возвращаем item, иначе null *//*
         return index != -1 ? items[index] : null;
     }
 
-
     private int indexOf(int id) {
         int rsl = -1;
-        for (int index = 0; index <= size; index++) {
-            if (items[index] != null) {
-                if (items[index].getId() == id) {
-                    rsl = index;
-                    break;
-                }
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                rsl = index;
+                break;
             }
         }
         return rsl;
@@ -64,8 +47,8 @@ public class Tracker {
             System.out.println("Элемент " + id + " не найден!");
             return result;
         }
-        item.setId(id); // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
-        items[index] = item; // делаем вставку
+        item.setId(id);         // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
+        items[index] = item;    // делаем вставку
         return true;
     }
 
@@ -73,15 +56,13 @@ public class Tracker {
     public Item[] findByName(String name) {
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
              Item item = this.items[i];
-             if (this.items[i] != null) {
-                 if (item.getName().equals(name)) {
-                    itemsWithoutNull[count] = this.items[i];
-                    System.out.println(itemsWithoutNull[count]);
-                    count++;
-                }
-            }
+             if (item.getName().equals(name)) {
+                 itemsWithoutNull[count] = this.items[i];
+                 System.out.println(itemsWithoutNull[count]);
+                 count++;
+             }
         }
         return Arrays.copyOf(itemsWithoutNull, count);
     }
