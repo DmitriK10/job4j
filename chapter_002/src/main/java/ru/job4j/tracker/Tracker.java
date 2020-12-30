@@ -40,7 +40,12 @@ public class Tracker {
         return rsl;
     }
 
-    //  метод заменяет заявку.
+    /**
+     * Метод реализует замену заявку. по id.
+     * @param id номер заявки;
+     * @param item новая заявка;
+     * @return result результат выполнения операции.
+     */
     public boolean replace(int id, Item item) {
         if (id <= 0) {
             System.out.println("Некорректный параметр " + id + "!");
@@ -49,12 +54,13 @@ public class Tracker {
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
-            items[index] = item;
+            item.setId(id);         // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
+            items[index] = item;    // делаем вставку
+
         } else {
             System.out.println("Элемент " + id + " не найден!");
         }
-        item.setId(id);         // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
-        items[index] = item;    // делаем вставку
+
         return rsl;
     }
 
