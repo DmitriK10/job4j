@@ -1,9 +1,39 @@
 package ru.job4j.tracker;
 
-/*5. tracker - хранилище [#396]
+/* 9. toString [#310018]
+*/
+public class Item {
+    private int id;
+    private String name;
+
+    @Override
+    public String toString() {
+        return "Item{" + "id=" + id +  ", name='" + name + '\'' + '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+/*package ru.job4j.tracker;
+
+*//*5. tracker - хранилище [#396]
 **
 **
- */
+ *//*
 public class Item {
     private int id;
     private String name;
@@ -23,7 +53,7 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
-}
+}*/
 
 /*
 package ru.job4j.tracker;

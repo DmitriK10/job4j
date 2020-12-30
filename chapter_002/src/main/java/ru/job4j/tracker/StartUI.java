@@ -2,12 +2,9 @@ package ru.job4j.tracker;
 
 import java.util.Arrays;
 
-/*5. Tracker - хранилище [#396]
+/*5. tracker - хранилище [#396]
  */
 public class StartUI {
-    /**
-     * @noinspection checkstyle:NoWhitespaceBefore
-     */
     public static void main(String[] args) {
         String[] names = {"Petr", null, "Ivan", "Stepan", null};
         String[] namesWithoutNull = new String[names.length];
@@ -26,15 +23,20 @@ public class StartUI {
             Item item = new Item();
             item.setId(index);
             item.setName(namesWithoutNull[index]);
-            tracker.add(item);
+            System.out.println(tracker.add(item).getName());
         }
         System.out.println("-----findAll-------");
-        tracker.findAll();
+        System.out.println(tracker.findAll());
         System.out.println("-----findByName-------");
-        tracker.findByName("Ivan");
+        System.out.println("Ivan" + tracker.findByName("Ivan"));
         System.out.println("-----findById 1-------");
-        System.out.println(tracker.findById(1));
+        System.out.println(tracker.findById(1).getName());
 
+        System.out.println();
+        Item item = new Item();
+        item.setId(1);
+        item.setName("Ivan");
+        System.out.println(item);
     }
 }
 
@@ -103,7 +105,7 @@ public class StartUI {
 /* Хранилище заявок.
             *//*
 
-    private final Tracker tracker;
+    private final tracker tracker;
 
     */
 /* Конструктор инициализирующий поля.
@@ -111,7 +113,7 @@ public class StartUI {
      * @param tracker хранилище заявок.
      *//*
 
-    public StartUI(Input input, Tracker tracker) {
+    public StartUI(Input input, tracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }*/
