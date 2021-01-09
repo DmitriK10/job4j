@@ -55,9 +55,9 @@ public class Tracker {
         boolean rsl = index != -1;
         if (rsl) {
             item.setId(id);         // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
-            items[index] = item;    // делаем вставку
-
+            items[index] = item;    // делаем вставку0
         } else {
+            rsl = false;
             System.out.println("Элемент " + id + " не найден!");
         }
 
@@ -78,6 +78,25 @@ public class Tracker {
         }
         return Arrays.copyOf(itemsWithoutNull, count);
     }
+
+    //  удаление item по id
+    public boolean deleteByName(String name) {
+        Item[] itemsFound = findByName(name);
+        boolean flag = false;
+        //* Находим item *//*
+        for (int i = 0; i < size; i++) {
+
+            for (int y = 0; y < itemsFound.length; y++) {
+                if (this.items[i].getName().equals(itemsFound[y].getName())) {
+                    this.items[i] = null;
+                    System.out.println(itemsFound[y] + " удалён");
+                    flag = true;
+                }
+            }
+        }
+        return true;
+    }
+
 
     /**
      * Метод реализует удаления заявки по id.
