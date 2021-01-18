@@ -46,7 +46,7 @@ public class Tracker {
      * @param item новая заявка;
      * @return result результат выполнения операции.
      */
-    public boolean replace(int id, Item item) {
+    public boolean replaceItem(int id, Item item) {
         if (id <= 0) {
             System.out.println("Некорректный параметр " + id + "!");
             return false;
@@ -79,31 +79,27 @@ public class Tracker {
         return Arrays.copyOf(itemsWithoutNull, count);
     }
 
-    //  удаление item по id
+    //  удаление item по name
     public boolean deleteByName(String name) {
         Item[] itemsFound = findByName(name);
-        boolean flag = false;
-        //* Находим item *//*
+        /* Находим item */
         for (int i = 0; i < size; i++) {
-
             for (int y = 0; y < itemsFound.length; y++) {
                 if (this.items[i].getName().equals(itemsFound[y].getName())) {
                     this.items[i] = null;
                     System.out.println(itemsFound[y] + " удалён");
-                    flag = true;
                 }
             }
         }
         return true;
     }
 
-
     /**
      * Метод реализует удаления заявки по id.
      * @param id номер заявки;
      * @return result результат выполнения операции.
      */
-    public boolean delete(int id) {
+    public boolean deteleByid(int id) {
         boolean result = false;
         if (id <= 0) {
             System.out.println("Некорректный параметр " + id + "!");
