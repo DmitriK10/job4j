@@ -8,7 +8,7 @@ public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int run = 0;
-        while ((run != 1) | (run != 2) | (run != 3)) {
+        while (true) {
             System.out.println("Игра 'Спички';.");
             System.out.println("1. 1 игрок");
             System.out.println("2. 2 игрока");
@@ -57,7 +57,7 @@ public class Matches {
                 turn = false;
             } else {
                 int select = 1 + new Random().nextInt(2);
-                System.out.println("Всего " + matchesQuant + 1" спичек. Игрок " + (turn ? 1 : 2) + " ходит2");
+                System.out.println("Всего " + matchesQuant + " спичек. Игрок " + (turn ? 1 : 2) + " ходит2");
                 matchesQuant = matchesQuant - select;
                 turn = true;
                 System.out.println(select);
