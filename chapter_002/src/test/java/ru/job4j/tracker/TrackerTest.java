@@ -19,7 +19,7 @@ public class TrackerTest {
                 int id = bug.getId();
                 Item bugWithDesc = new Item();
                 bugWithDesc.setName("Bug with description");
-                tracker.replaceItem(id, bugWithDesc);
+                tracker.replace(id, bugWithDesc);
                 assertThat(tracker.findById(id).getName(), is("Bug with description"));
         }
 
@@ -29,9 +29,9 @@ public class TrackerTest {
                 Item bug = new Item();
                 bug.setName("Bug");
                 tracker.add(bug);
-                int id = bug.getId();
-                tracker.deteleByid(id);
-                assertThat(tracker.findById(id), is(nullValue()));
+                String name = bug.getName();
+                tracker.detele(name);
+                assertThat(tracker.findByName(name), is(nullValue()));
         }
 
         @Test
@@ -44,8 +44,8 @@ public class TrackerTest {
                 Item item = new Item();
                 item.setName("Ivan");
                 tracker.add(item);
-                int id2 = item.getId();
-                tracker.deteleByid(id);
+                String name = item.getName();
+                tracker.detele(name);
                 assertThat(tracker.findById(id), is(nullValue()));
         }
 }
