@@ -13,7 +13,6 @@ public class StartUI {
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
         tracker.add(item);
-        //return true;
     }
 
     public static void replaceItem(Input input, Tracker tracker) {
@@ -21,24 +20,21 @@ public class StartUI {
         int id = input.askInt("Enter id: ");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        tracker.replace(id, item);
-       /* if (tracker.replace(id, item)) {
-            return true;
+        if (tracker.replace(id,item)) {
+            System.out.println("Заявка успешно обновлена!");
         } else {
-            return false;
-        }*/
+            System.out.println("Ошибка замены! Проверьте корректность id");
+        }
     }
 
     public static void deteleItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ====");
         String name = input.askStr("Enter name: ");
-        tracker.detele(name);
-        /*if (tracker.detele(name)) {
-            return true;
+        if (tracker.detele(name)) {
+            System.out.println("Item " + input + " удалён");
         } else {
-            return false;
-        }*/
-
+            System.out.println("Ошибка удаления. Проверьте точность данных");
+        }
     }
 
     public void init(Input input, Tracker tracker) {
@@ -57,19 +53,8 @@ public class StartUI {
                 }
             }   else if (select == 2) {
                     replaceItem(input, tracker);
-                    /*if (replaceItem(input, tracker)) {
-                        System.out.println("Замена произошла");
-                    } else {
-                        System.out.println("Ошибка замены. Проверьте точность данных");
-                    }*/
             }   else if (select == 3) {
                     deteleItem(input, tracker);
-                    /*if (deteleItem(input, tracker)) {
-                        System.out.println("Item " + input + " удалён");
-                    } else {
-                        System.out.println("Ошибка удаления. Проверьте точность данных");
-                    }*/
-
             }   else if (select == 4) {
                 System.out.println("=== Find item by Id ====");
                 System.out.println("Enter id: ");
@@ -94,7 +79,7 @@ public class StartUI {
             }   else if (select == 6) {
                     run = false;
             }   else  if ((select > 6) | (select < 0)) {
-                System.out.println("=== Введено некоректное значение! ====");
+                    System.out.println("=== Введено некоректное значение! ====");
             }
 
         }

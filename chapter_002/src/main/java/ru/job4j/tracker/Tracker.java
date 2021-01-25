@@ -57,7 +57,7 @@ public class Tracker {
             item.setId(id);         // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
             items[index] = item;    // делаем вставку0
         } else {
-            System.out.println("Элемент " + id + " не найден!");
+            rsl = false;
         }
 
         return rsl;
@@ -92,7 +92,6 @@ public class Tracker {
             for (int y = 0; y < itemsFound.length; y++) {
                 if (this.items[i].getName().equals(itemsFound[y].getName())) {
                     this.items[i] = null;
-                    System.out.println(itemsFound[y] + " удалён");
                 }
             }
         }
