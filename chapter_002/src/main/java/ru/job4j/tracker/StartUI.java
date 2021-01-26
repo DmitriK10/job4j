@@ -8,6 +8,15 @@ public class StartUI {
         new StartUI().init(input, tracker);
     }
 
+    public static void showAllItems(Input input, Tracker tracker) {
+        System.out.println("=== Show all items ====");
+        Item[] result = tracker.findAll();
+        System.out.println("Items: ");
+        for (Item item : result) {
+            System.out.println(item + " ");
+        }
+    }
+
     public static void createItem(Input input, Tracker tracker) {
         System.out.println("=== Create a new Item ====");
         String name = input.askStr("Enter name: ");
@@ -45,12 +54,7 @@ public class StartUI {
             if (select == 0) {
                 createItem(input, tracker);
             }   else if (select == 1) {
-                System.out.println("=== Show all items ====");
-                Item[] result = tracker.findAll();
-                System.out.println("Items: ");
-                for (Item item : result) {
-                    System.out.println(item + " ");
-                }
+                    showAllItems(input, tracker);
             }   else if (select == 2) {
                     replaceItem(input, tracker);
             }   else if (select == 3) {
