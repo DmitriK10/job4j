@@ -10,10 +10,8 @@ public class StartUI {
 
     public static void finditemsByName(Input input, Tracker tracker) {
         System.out.println("=== Find items by name ====");
-        System.out.println("Enter name: ");
-        String name = input.askStr("");
+        String name = input.askStr("Enter name:");
         Item[] items = tracker.findByName(name);
-        //if (item != null) {
         if (items.length == 0) {
             System.out.println("Заявка с name " + name + " не найдена!");
         } else {
@@ -23,18 +21,12 @@ public class StartUI {
 
     public static void finditemsByid(Input input, Tracker tracker) {
         System.out.println("=== Find item by Id ====");
-        System.out.println("Enter id: ");
-        int id = input.askInt("");
-        Item item;
-        item = tracker.findById(id);
+        int id = input.askInt("Enter id: ");
+        Item item = tracker.findById(id);
         if (item != null) {
-            if (item.equals(null)) {
-                System.out.println("Заявка с id " + id + " не найдена!");
-            } else {
-                System.out.println("Результат поиска:" + item.getId() + " " + item.getName());
-            }
-        }   else {
-            System.out.println("Пустой массив items!");
+            System.out.println(item);
+        } else {
+            System.out.println("Заявка не найдена. Проверьте корректность id");
         }
     }
 
@@ -68,8 +60,8 @@ public class StartUI {
 
     public static void deteleItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ====");
-        String name = input.askStr("Enter name: ");
-        if (tracker.detele(name)) {
+        int id = input.askInt("Enter id: ");
+        if (tracker.delete(id)) {
             System.out.println("Item " + input + " удалён");
         } else {
             System.out.println("Ошибка удаления. Проверьте точность данных");
