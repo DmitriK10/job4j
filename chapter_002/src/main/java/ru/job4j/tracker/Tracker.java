@@ -80,21 +80,20 @@ public class Tracker {
 
 
 
-    /**
-     * Метод реализует удаления заявки по id.
-     * @param 'id' номер заявки;
-     * @return result результат выполнения операции.
-     */
-    public boolean detele(String name) {
-        Item[] itemsFound = findByName(name);
-        /* Находим item */
-        for (int i = 0; i < size; i++) {
-            for (int y = 0; y < itemsFound.length; y++) {
-                if (this.items[i].getName().equals(itemsFound[y].getName())) {
-                    this.items[i] = null;
-                }
-            }
+    //  удаления заявки по id
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        boolean result = false;
+        if (index == -1) {
+            System.out.println("Элемент " + id + " не найден!");
+            return result;
         }
+        int start = index + 1;
+        int distPos = index;
+        int length = size - index;
+        System.arraycopy(items, start, items, distPos, length);
+        items[size - 1] = null;
+        size--;
         return true;
     }
 }

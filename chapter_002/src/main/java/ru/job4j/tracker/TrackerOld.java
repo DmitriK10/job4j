@@ -101,8 +101,27 @@ public class Tracker {
         return Arrays.copyOf(itemsWithoutNull, count);
     }
 
+    /**
+     * Метод реализует удаления заявки по id.
+     * @param 'id' номер заявки;
+     * @return result результат выполнения операции.
+     */
+/*
+    public boolean detele(String name) {
+    Item[] itemsFound = findByName(name);
+    /* Находим item */
+/*    for (int i = 0; i < size; i++) {
+        for (int y = 0; y < itemsFound.length; y++) {
+            if (this.items[i].getName().equals(itemsFound[y].getName())) {
+                this.items[i] = null;
+            }
+        }
+    }
+    return true;
+} */
+
     //  удаления заявки по id
-    public boolean delete(int id) {
+/*    public boolean delete(int id) {
         int index = indexOf(id);
         boolean result = false;
         if (index == -1) {
@@ -118,7 +137,7 @@ public class Tracker {
         return true;
     }
 }
-
+*/
 
 /*5. tracker - хранилище [#396]
  end */
