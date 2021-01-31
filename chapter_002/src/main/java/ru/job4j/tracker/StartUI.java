@@ -8,7 +8,7 @@ public class StartUI {
         new StartUI().init(input, tracker);
     }
 
-    public static void finditemsByName(Input input, Tracker tracker) {
+    public static void finiteByName(Input input, Tracker tracker) {
         System.out.println("=== Find items by name ====");
         String name = input.askStr("Enter name:");
         Item[] items = tracker.findByName(name);
@@ -19,7 +19,7 @@ public class StartUI {
         }
     }
 
-    public static void finditemsByid(Input input, Tracker tracker) {
+    public static void finiteBid(Input input, Tracker tracker) {
         System.out.println("=== Find item by Id ====");
         int id = input.askInt("Enter id: ");
         Item item = tracker.findById(id);
@@ -51,18 +51,18 @@ public class StartUI {
         int id = input.askInt("Enter id: ");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        if (tracker.replace(id,item)) {
+        if (tracker.replace(id, item)) {
             System.out.println("Заявка успешно обновлена!");
         } else {
             System.out.println("Ошибка замены! Проверьте корректность id");
         }
     }
 
-    public static void deteleItem(Input input, Tracker tracker) {
+    public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ====");
         int id = input.askInt("Enter id: ");
         if (tracker.delete(id)) {
-            System.out.println("Item " + input + " удалён");
+            System.out.println("Item id:" + id +  " удалён");
         } else {
             System.out.println("Ошибка удаления. Проверьте точность данных");
         }
@@ -80,19 +80,20 @@ public class StartUI {
             }   else if (select == 2) {
                     replaceItem(input, tracker);
             }   else if (select == 3) {
-                    deteleItem(input, tracker);
+                    deleteItem(input, tracker);
             }   else if (select == 4) {
-                    finditemsByid(input, tracker);
+                    finiteBid(input, tracker);
             }   else if (select == 5) {
-                    finditemsByName(input, tracker);
+                    finiteByName(input, tracker);
             }   else if (select == 6) {
                     run = false;
-            }   else  if ((select > 6) | (select < 0)) {
+            }   else  if (select > 6)  {
                     System.out.println("=== Введено некоректное значение! ====");
             }
 
         }
     }
+
     private void showMenu() {
         System.out.println("Menu.");
         System.out.println("0. Add new Item");

@@ -33,6 +33,7 @@ public class Matches {
         switch (run) {
             case    1: mGame(1);
             case    2: mGame(2);
+            default: break;
         }
     }
 
@@ -41,6 +42,7 @@ public class Matches {
         switch (num) {
             case 1: soloplay = true;
             case 2: soloplay = false;
+            default: break;
         }
         int matchesQuant = 11;
         boolean turn = true;

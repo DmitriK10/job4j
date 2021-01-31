@@ -45,7 +45,7 @@ public class TrackerTest {
                 item.setName("Ivan");
                 tracker.add(item);
                 int id2 = item.getId();
-                tracker.delete(id2);
+                tracker.delete(id);
                 assertThat(tracker.findById(id), is(nullValue()));
         }
 }
