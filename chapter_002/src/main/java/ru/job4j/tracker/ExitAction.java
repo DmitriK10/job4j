@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-/**
+/*
  * Выход из программы.
  * @author Dmitrii K
  */

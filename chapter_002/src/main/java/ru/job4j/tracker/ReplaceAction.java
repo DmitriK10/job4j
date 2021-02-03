@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-/**
+/*
  * Изменение существующего item.
  * @author Dmitrii K
  */

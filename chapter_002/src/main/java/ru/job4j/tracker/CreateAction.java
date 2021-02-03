@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-/**
+/*
  * Создание нового item.
  * @author Dnitrii K
  */

@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-/**
+/*
  * Поиск заявки по id.
  * @author Dmitrii K
  */

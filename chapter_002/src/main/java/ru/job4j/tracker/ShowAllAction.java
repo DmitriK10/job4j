@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-/**
+/*
  * Вывод списка всех item.
  * @author Dmitrii K
  */

@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 //8. Что такое валидация? [#246864]
 import java.util.Arrays;
 
-/**
+/*
  * Система заявок - Tracker.
  * @author Dmitrii K
  */
@@ -80,8 +80,6 @@ public class Tracker {
         }
         return Arrays.copyOf(itemsWithoutNull, count);
     }
-
-
 
     //  удаления заявки по id
     public boolean delete(int id) {

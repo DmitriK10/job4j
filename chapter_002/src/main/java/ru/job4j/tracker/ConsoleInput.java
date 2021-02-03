@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Scanner;
 
-/**
+/*
  * Консольный ввод.
  * @author Dmitrii K
  */
