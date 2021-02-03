@@ -1,8 +1,11 @@
 package ru.job4j.tracker;
-
+//8. Что такое валидация? [#246864]
 import java.util.Arrays;
 
-//8. Что такое валидация? [#246864]
+/**
+ * Система заявок - Tracker.
+ * @author Dmitrii K
+ */
 public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;

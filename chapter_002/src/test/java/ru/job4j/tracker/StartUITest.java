@@ -1,3 +1,4 @@
+/*
 package ru.job4j.tracker;
 
 import org.junit.Test;
@@ -23,7 +24,9 @@ public class StartUITest {
         Item item = new Item("new item");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()), /* id сохраненной заявки в объект tracker. */
+                String.valueOf(item.getId()), */
+/* id сохраненной заявки в объект tracker. *//*
+
                 "replaced item"
         };
         StartUI.replaceItem(new StubInput(answers), tracker);
@@ -37,7 +40,9 @@ public class StartUITest {
         Item item = new Item("new item");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()), /* id сохраненной заявки в объект tracker. */
+                String.valueOf(item.getId()), */
+/* id сохраненной заявки в объект tracker. *//*
+
                 "deleted item"
         };
         StartUI.deleteItem(new StubInput(answers), tracker);
@@ -46,4 +51,4 @@ public class StartUITest {
         assertThat(deleted, is(iAmNull));
     }
 
-}
+}*/
