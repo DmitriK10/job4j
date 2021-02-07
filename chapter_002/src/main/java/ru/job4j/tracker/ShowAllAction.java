@@ -5,9 +5,15 @@ package ru.job4j.tracker;
  * @author Dmitrii K
  */
 public class ShowAllAction implements UserAction {
+    private final Output out;
+
+    public ShowAllAction(Output out) {
+        this.out = out;
+    }
+
     @Override
     public String name() {
-        return "=== Show all items ===";
+        return "Show all";
     }
 
     @Override

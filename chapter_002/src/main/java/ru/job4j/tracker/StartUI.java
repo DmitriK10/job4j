@@ -1,10 +1,16 @@
-package ru.job4j.tracker;
-// 8. Реализация меню за счет шаблона стратегия. [#181780]
+//9.1 Зависимость от System.out [#33568]
 /*
  * Касс для работы с Tracker
  * @author Dmitrii K
  */
+package ru.job4j.tracker;
+
 public class StartUI {
+    private final Output out;
+
+    public StartUI(Output out) {
+        this.out = out;
+    }
 
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
@@ -17,41 +23,25 @@ public class StartUI {
     }
 
     private void showMenu(UserAction[] actions) {
-        System.out.println("Menu.");
+        out.println("Menu.");
         for (int index = 0; index < actions.length; index++) {
-            System.out.println(index + ". " + actions[index].name());
+            out.println(index + ". " + actions[index].name());
         }
     }
 
     public static void main(String[] args) {
+        Output output = new ConsoleOutput();
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new CreateAction(),     //Create item
-                new ShowAllAction(),    //Show all items
-                new DeleteAction(),     //Delete item
-                new ReplaceAction(),    //Edit item
-                new FindByIdAction(),   //Find item by Id
-                new FindByNameAction(),  //Find items by name*/
-                new Exit()        //Exit //
+                new CreateAction(output),
+                new ShowAllAction(output),
+                new DeleteAction(output),
+                new ReplaceAction(output),
+                new FindByIdAction(output),
+                new FindByNameAction(output),
+                new Exit()
         };
-        new StartUI().init(input, tracker, actions);
+        new StartUI(output).init(input, tracker, actions);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

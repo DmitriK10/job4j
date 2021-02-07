@@ -5,9 +5,15 @@ package ru.job4j.tracker;
  * @author Dmitrii K
  */
 public class FindByIdAction implements UserAction {
+    private final Output out;
+
+    public FindByIdAction(Output out) {
+        this.out = out;
+    }
+
     @Override
     public String name() {
-        return "=== Find by Id Item ====";
+        return "Find by Id";
     }
 
     @Override

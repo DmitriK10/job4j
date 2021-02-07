@@ -5,9 +5,15 @@ package ru.job4j.tracker;
  * @author Dmitrii K
  */
 public class ReplaceAction implements UserAction {
+    private final Output out;
+
+    public ReplaceAction(Output out) {
+        this.out = out;
+    }
+
     @Override
     public String name() {
-        return "=== Replace Item ====";
+        return "Replace";
     }
 
     @Override
