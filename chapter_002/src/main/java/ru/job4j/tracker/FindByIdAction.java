@@ -18,12 +18,13 @@ public class FindByIdAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
+        out.println("=== Find Item by id ====");
         int id = input.askInt("Enter id: ");
         Item item = tracker.findById(id);
         if (item != null) {
-            System.out.println(item);
+            out.println(item);
         } else {
-            System.out.println("Заявка не найдена. Проверьте корректность id");
+            out.println("Заявка не найдена. Проверьте корректность id");
         }
         return true;
     }
