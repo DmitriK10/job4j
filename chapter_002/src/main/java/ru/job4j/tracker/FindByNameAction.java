@@ -22,9 +22,11 @@ public class FindByNameAction implements UserAction {
         String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);
         if (items.length == 0) {
-            out.println("Заявка с name " + name + " не найдена!");
+            out.println("Заявка с name: " + name + " не найдена! Проверьте корректность name");
         } else {
-            out.println("Поиск завершен");
+            for (int x = 0; x < items.length; x ++) {
+                out.println("Item id: " + items[x].getId() + " name: " + items[x].getName());
+            }
         }
         return true;
     }

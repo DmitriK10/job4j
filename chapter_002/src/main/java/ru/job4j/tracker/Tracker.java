@@ -76,7 +76,7 @@ public class Tracker {
             Item item = this.items[i];
             if (item.getName().equals(name)) {
                 itemsWithoutNull[count] = this.items[i];
-                System.out.println(itemsWithoutNull[count].getName());
+                //System.out.println(itemsWithoutNull[count].getName());
                 count++;
             }
         }
