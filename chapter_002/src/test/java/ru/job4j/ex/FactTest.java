@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class FactTest {
-    @Test(expected = IllegalArgumentException.class)
+/*    @Test(expected = IllegalArgumentException.class)
     public void when5() {
         Fact fast = new Fact();
         int x = fast.calc(5);
@@ -17,5 +17,26 @@ public class FactTest {
         Fact fast = new Fact();
         int x = fast.calc(0);
         assertThat(x, is(1));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void whenzero() {
+        Fact fast = new Fact();
+        int x = fast.calc(0);
+        assertThat(x, is(1));
+    }*/
+
+    @Test(expected = IllegalArgumentException.class)
+    public void whennegative() {
+        Fact fast = new Fact();
+        int x = fast.calc(-5);
+        assertThat(x, is("неправильный аргумент"));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void whennegative2() {
+        Fact fast = new Fact();
+        int x = fast.calc(-10);
+        assertThat(x, is("неправильный аргумент"));
     }
 }
