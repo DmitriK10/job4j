@@ -30,13 +30,13 @@ public class FactTest {
     public void whennegative() {
         Fact fast = new Fact();
         int x = fast.calc(-5);
-        assertThat(x, is("неправильный аргумент"));
+        assertThat(x, is(120));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void whennegative2() {
         Fact fast = new Fact();
         int x = fast.calc(-10);
-        assertThat(x, is("неправильный аргумент"));
+        assertThat(x, is(3628800));
     }
 }
