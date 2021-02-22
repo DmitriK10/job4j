@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.iput;
 //5. Input и полиморфизм. [#181094]
 public class StubInput implements Input {
     private String[] answers;

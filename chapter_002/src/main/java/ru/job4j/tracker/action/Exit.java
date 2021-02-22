@@ -1,4 +1,8 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.action;
+
+import ru.job4j.tracker.iput.Input;
+import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.UserAction;
 
 /*
  * Выход из программы.

@@ -1,4 +1,7 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.action;
+
+import ru.job4j.tracker.*;
+import ru.job4j.tracker.iput.Input;
 
 /*
  * Изменение существующего item.

@@ -1,4 +1,7 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.action;
+
+import ru.job4j.tracker.*;
+import ru.job4j.tracker.iput.Input;
 
 /*
  * Вывод списка всех item.
@@ -21,7 +24,7 @@ public class ShowAllAction implements UserAction {
         out.println("=== Show all Items ====");
         Item[] result = tracker.findAll();
         for (Item item : result) {
-            out.println(item + " ");
+            out.println(item);
         }
         return true;
     }
