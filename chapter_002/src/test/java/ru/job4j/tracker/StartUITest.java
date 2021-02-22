@@ -1,6 +1,13 @@
 package ru.job4j.tracker;
 //9.2. Тесты вывода на консоль [#33585]
 import org.junit.Test;
+import ru.job4j.tracker.action.Exit;
+import ru.job4j.tracker.action.FindByIdAction;
+import ru.job4j.tracker.action.FindByNameAction;
+import ru.job4j.tracker.action.ShowAllAction;
+import ru.job4j.tracker.iput.Input;
+import ru.job4j.tracker.iput.StubInput;
+
 import static org.hamcrest.Matchers.is;
 //import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
@@ -109,13 +116,13 @@ public class StartUITest {
     @Test
     public void whenFindId2() {
         Output out = new StubOutput();
-        Input in = new StubInput(
-                new String[] {"0", "2", "1"}
-        );
         Tracker tracker = new Tracker();
         tracker.add(new Item("New item 1"));
-        tracker.add(new Item("New item 2"));
+        Item add = tracker.add(new Item("New item 2"));
         tracker.add(new Item("New item 3"));
+        Input in = new StubInput(
+                new String[] {"0", String.valueOf(add.getId()), "1"}
+        );
         UserAction[] actions = {
                 new FindByIdAction(out),
                 new Exit()
