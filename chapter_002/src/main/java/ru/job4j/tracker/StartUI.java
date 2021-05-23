@@ -5,6 +5,12 @@
  */
 package ru.job4j.tracker;
 
+import ru.job4j.tracker.action.*;
+import ru.job4j.tracker.iput.ConsoleInput;
+import ru.job4j.tracker.iput.Input;
+import ru.job4j.tracker.output.ConsoleOutput;
+import ru.job4j.tracker.output.Output;
+
 public class StartUI {
     private final Output out;
 

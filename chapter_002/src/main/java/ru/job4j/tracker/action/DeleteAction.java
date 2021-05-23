@@ -1,6 +1,6 @@
 package ru.job4j.tracker.action;
 
-import ru.job4j.tracker.Output;
+import ru.job4j.tracker.output.Output;
 import ru.job4j.tracker.Tracker;
 import ru.job4j.tracker.UserAction;
 import ru.job4j.tracker.iput.Input;

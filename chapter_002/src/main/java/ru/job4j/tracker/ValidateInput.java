@@ -1,6 +1,9 @@
 package ru.job4j.tracker;
 //2. Рефакторинг - Шаблон Декоратор для валидатора. [#34117]
 
+import ru.job4j.tracker.iput.Input;
+import ru.job4j.tracker.output.Output;
+
 public class ValidateInput implements Input {
     private final Output out;
     private final Input in;
