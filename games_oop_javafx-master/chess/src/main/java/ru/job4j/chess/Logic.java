@@ -4,7 +4,7 @@ import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.Figure;
 import java.util.Arrays;
 
-/**
+/*
  * 2. Каркас шахматной доски [#792]
  * @since 24.05.2021
  */

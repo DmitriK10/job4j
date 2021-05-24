@@ -3,7 +3,7 @@ package ru.job4j.chess.figures.black;
 import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.Figure;
 
-/*
+/**
  * 2. Каркас шахматной доски [#792]
  * @since 24.05.2021
  */

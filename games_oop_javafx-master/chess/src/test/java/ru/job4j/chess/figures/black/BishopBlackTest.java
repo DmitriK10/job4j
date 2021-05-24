@@ -6,7 +6,7 @@ import ru.job4j.chess.figures.Cell;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-/*
+/**
  * 2. Каркас шахматной доски [#792]
  * @since 24.05.2021
  */

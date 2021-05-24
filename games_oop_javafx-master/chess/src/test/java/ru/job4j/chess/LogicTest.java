@@ -4,7 +4,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.black.BishopBlack;
-/*
+/**
  * 2. Каркас шахматной доски [#792]
  * @since 24.05.2021
  */
