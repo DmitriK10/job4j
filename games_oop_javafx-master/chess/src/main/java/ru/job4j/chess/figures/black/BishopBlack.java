@@ -5,7 +5,8 @@ import ru.job4j.chess.figures.Figure;
 
 /**
  * 2. Каркас шахматной доски [#792]
- * @since 24.05.2021
+ * @version $Id$
+ * @since 23.05.2021
  */
 public class BishopBlack implements Figure {
     private final Cell position;
@@ -35,22 +36,16 @@ public class BishopBlack implements Figure {
         int deltaX = posX < dest.getX() ? 1 : -1;
         int deltaY = posY < dest.getY() ? 1 : -1;
         for (int index = 0; index < size; index++) {
-            int x = posX + deltaX * (index + 1);
-            int y = posY + deltaY * (index + 1);
-            steps[index] = Cell.findBy(x, y);
+            posX += deltaX;
+            posY += deltaY;
+            steps[index] = Cell.findBy(posX, posY);
         }
         return steps;
     }
 
     //проверка пути фигуры соответствия на диагональ
     public boolean isDiagonal(Cell source, Cell dest) {
-        boolean fl = false;
-        if (Math.abs(source.getX() - dest.getX()) == Math.abs(source.getY() - dest.getY())) {
-            fl = true;
-        } else {
-            fl = false;
-        }
-        return fl;
+        return Math.abs(source.getX() - dest.getX()) == Math.abs(source.getY() - dest.getY());
     }
 
     @Override

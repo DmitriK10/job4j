@@ -2,15 +2,24 @@ package ru.job4j.chess.figures.black;
 
 
 import org.junit.Test;
+import ru.job4j.chess.FigureNotFoundException;
+import ru.job4j.chess.ImpossibleMoveException;
+import ru.job4j.chess.Logic;
+import ru.job4j.chess.OccupiedCellException;
 import ru.job4j.chess.figures.Cell;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-/**
- * 2. Каркас шахматной доски [#792]
- * @since 24.05.2021
- */
+
 public class BishopBlackTest {
+
+    @Test (expected = ImpossibleMoveException.class)
+    public void impossibleMoveException()
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
+        Logic logic = new Logic();
+        logic.add(new BishopBlack(Cell.F8));
+        logic.move(Cell.F8, Cell.E7);
+    }
 
     @Test
     public void position() {

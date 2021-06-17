@@ -4,9 +4,10 @@ import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.Figure;
 import java.util.Arrays;
 
-/*
+/**
  * 2. Каркас шахматной доски [#792]
- * @since 24.05.2021
+ * @version $Id$
+ * @since 23.05.2021
  */
 public final class Logic {
     private final Figure[] figures = new Figure[32];
@@ -27,8 +28,10 @@ public final class Logic {
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (int index = 0; index != figures.length; index++) {
             for (int step = 0; step != steps.length; step++) {
-                if (steps[step] == figures[index].position()) {
-                    return false;
+                if (steps[step].equals(figures[index].position())) {
+                    throw new  OccupiedCellException(
+                            String.format("Could not move to occupied place")
+                    );
                 }
             }
         }
@@ -47,6 +50,8 @@ public final class Logic {
                 return index;
             }
         }
-        throw new FigureNotFoundException();
+        throw new FigureNotFoundException(
+                String.format("Figure not found")
+        );
     }
 }
