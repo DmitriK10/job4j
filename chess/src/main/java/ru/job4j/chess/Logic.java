@@ -26,6 +26,7 @@ public final class Logic {
         figures[index] = figures[index].copy(dest);
     }
 
+   // проверка маршрута на лрступность
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (Figure figure : figures) {
             for (Cell step : steps) {
