@@ -1,8 +1,12 @@
-package ru.job4j.chess;
+package ru.job4j;
 
 import javafx.scene.Group;
 import org.junit.Ignore;
 import org.junit.Test;
+import ru.job4j.chess.FigureNotFoundException;
+import ru.job4j.chess.ImpossibleMoveException;
+import ru.job4j.chess.Logic;
+import ru.job4j.chess.OccupiedCellException;
 import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.black.BishopBlack;
 

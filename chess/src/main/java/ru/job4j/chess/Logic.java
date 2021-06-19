@@ -2,6 +2,7 @@ package ru.job4j.chess;
 
 import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.Figure;
+
 import java.util.Arrays;
 
 /**
@@ -26,9 +27,9 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
-        for (int index = 0; index != figures.length; index++) {
-            for (int step = 0; step != steps.length; step++) {
-                if (steps[step].equals(figures[index].position())) {
+        for (Figure figure : figures) {
+            for (Cell step : steps) {
+                if (step.equals(figure.position())) {
                     throw new  OccupiedCellException(
                             String.format("Could not move to occupied place")
                     );
