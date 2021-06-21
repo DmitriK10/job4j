@@ -1,5 +1,6 @@
 package ru.job4j.chess.figures.black;
 
+import ru.job4j.chess.ImpossibleMoveException;
 import ru.job4j.chess.figures.Cell;
 import ru.job4j.chess.figures.Figure;
 
@@ -25,7 +26,7 @@ public class BishopBlack implements Figure {
     public Cell[] way(Cell dest) {
 
         if (!isDiagonal(position, dest)) {
-            throw new IllegalStateException(
+            throw new ImpossibleMoveException(
                     String.format("Could not move by diagonal from %s to %s", position, dest)
             );
         }

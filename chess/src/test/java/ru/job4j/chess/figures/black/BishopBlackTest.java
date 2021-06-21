@@ -15,10 +15,11 @@ public class BishopBlackTest {
 
     @Test (expected = ImpossibleMoveException.class)
     public void impossibleMoveException()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
-        Logic logic = new Logic();
-        logic.add(new BishopBlack(Cell.F8));
-        logic.move(Cell.F8, Cell.E7);
+            throws ImpossibleMoveException {
+        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
+        Cell[] rsl = {Cell.D2, Cell.E3};
+        bishopBlack.way(Cell.E1);
+        bishopBlack.way(Cell.E5);
     }
 
     @Test
