@@ -17,8 +17,6 @@ public class BishopBlackTest {
     public void impossibleMoveException()
             throws ImpossibleMoveException {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        Cell[] rsl = {Cell.D2, Cell.E3};
-        bishopBlack.way(Cell.E1);
         bishopBlack.way(Cell.E5);
     }
 
