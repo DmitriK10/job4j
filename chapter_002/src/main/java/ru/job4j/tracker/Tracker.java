@@ -1,28 +1,30 @@
 package ru.job4j.tracker;
-//9.1 Зависимость от System.out [#33568]
+//6. Изменить программу Tracker из 2-го модуля [#10039]
 
 /*
  * Система заявок - Tracker.
  * @author Dmitrii K
  */
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tracker {
-    private final Item[] items = new Item[100];
+    private final List<Item> items = new ArrayList<>();
+    //private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
 
     //  добавление нового item
     public Item add(Item item) {
         item.setId(ids++);
-        items[size++] = item;
+        items.add(size++, item);
         return item;
     }
 
     //  получение списка всех item
-    public Item[] findAll() {
-        return Arrays.copyOf(items, size);
+    public List<Item> findAll() {
+        return items;
     }
 
     //  поиск item по id
@@ -30,14 +32,14 @@ public class Tracker {
         //* Находим индекс *//*
         int index = indexOf(id);
         //* Если индекс найден возвращаем item, иначе null *//*
-        return index != -1 ? items[index] : null;
+        return index != -1 ? items.get(index) : null;
     }
 
     //  метод  возвращает index по id.
     private int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < size; index++) {
-            if (items[index].getId() == id) {
+            if (items.get(index).getId() == id) {
                 rsl = index;
                 break;
             }
@@ -60,7 +62,7 @@ public class Tracker {
         boolean rsl = index != -1;
         if (rsl) {
             item.setId(id);         // устанавливаем добавляемой заявке id, чтобы мы потом смогли ее найти
-            items[index] = item;    // делаем вставку0
+            items.set(index, item);    // делаем вставку0
         } else {
             rsl = false;
         }
@@ -69,7 +71,7 @@ public class Tracker {
     }
 
     //  получение списка по имени
-    public Item[] findByName(String name) {
+    /*public Item[] findByName(String name) {
         Item[] itemsWithoutNull = new Item[this.items.length];
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -81,6 +83,15 @@ public class Tracker {
             }
         }
         return Arrays.copyOf(itemsWithoutNull, count);
+    }*/
+    public List<Item> findByName(String key) {
+        List<Item> result = new ArrayList<>();
+        for (Item element : items) {
+            if (element.getName().equals(key)) {
+                result.add(element);
+            }
+        }
+        return result;
     }
 
     //  удаления заявки по id
@@ -95,7 +106,7 @@ public class Tracker {
         int distPos = index;
         int length = size - index;
         System.arraycopy(items, start, items, distPos, length);
-        items[size - 1] = null;
+        items.set(size - 1, null);
         size--;
         return true;
     }

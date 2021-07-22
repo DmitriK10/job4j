@@ -4,6 +4,8 @@ import ru.job4j.tracker.*;
 import ru.job4j.tracker.iput.Input;
 import ru.job4j.tracker.output.Output;
 
+import java.util.List;
+
 /*
  * Вывод списка всех item.
  * @author Dmitrii K
@@ -23,7 +25,7 @@ public class ShowAllAction implements UserAction {
     @Override
     public boolean execute(Input input, Tracker tracker) {
         out.println("=== Show all Items ====");
-        Item[] result = tracker.findAll();
+        List<Item> result = tracker.findAll();
         for (Item item : result) {
             out.println(item);
         }
