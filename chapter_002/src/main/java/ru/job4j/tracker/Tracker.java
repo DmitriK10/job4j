@@ -22,7 +22,7 @@ public class Tracker {
 
     //  получение списка всех item
     public List<Item> findAll() {
-        return items;
+        return List.copyOf(items);
     }
 
     //  поиск item по id
