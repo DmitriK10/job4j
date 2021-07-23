@@ -21,7 +21,7 @@ public class Tracker {
     }
 
     //  получение списка всех item
-    public List findAll() {
+    public List<Item> findAll() {
         return items;
     }
 
@@ -52,10 +52,6 @@ public class Tracker {
      * @return result результат выполнения операции.
      */
     public boolean replace(int id, Item item) {
-        if (id <= 0) {
-            System.out.println("Некорректный параметр id " + id + "!");
-            return false;
-        }
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
