@@ -1,7 +1,6 @@
 package ru.job4j.collection;
 //1. Паспорт и жители [#212656]
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
