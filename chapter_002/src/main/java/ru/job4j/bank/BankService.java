@@ -30,6 +30,7 @@ public class BankService {
         return null;
     }
 
+    //метод ищет счет пользователя по реквизита
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
         if (user !=  null) {
