@@ -12,8 +12,8 @@ public class BankService {
 
    public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
-        if (! user.getUsername().isEmpty() ) {
-            ArrayList<Account> accounts = (ArrayList<Account>) users.get(user);
+        if (user !=  null) {
+            List<Account> accounts = users.get(user);
             if (!accounts.contains(account)) {
                 accounts.add(account);
             }
@@ -48,21 +48,11 @@ public class BankService {
         boolean rsl = false;
         Account srcAccount = findByRequisite(srcPassport, srcRequisite);
         Account destAccount = findByRequisite(destPassport, destRequisite);
-        if (srcAccount != null && destAccount != null) {
-            if (srcAccount.getBalance() - amount >= 0) {
-                srcAccount.setBalance(srcAccount.getBalance() - amount);
-                destAccount.setBalance(destAccount.getBalance() + amount);
-                rsl = true;
-            }
+        if (srcAccount != null && destAccount != null && srcAccount.getBalance() >= amount) {
+            srcAccount.setBalance(srcAccount.getBalance() - amount);
+            destAccount.setBalance(destAccount.getBalance() + amount);
+            rsl = true;
         }
         return rsl;
-    }
-    public static void main(String[] args) {
-        List<Account> accounts = new ArrayList<>();
-        String requisite = "3fdsbb9";
-        accounts.add(new Account("3fdsbb9", 140));
-        int index = accounts.indexOf(new Account(requisite, -1));
-        Account find = accounts.get(index);
-        System.out.println(find.getRequisite() + " -> " + find.getBalance());
     }
 }
