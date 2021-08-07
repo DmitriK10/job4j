@@ -4,6 +4,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Collections;
+import java.util.Objects;
+
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -24,5 +26,12 @@ public class ComparatorTest {
         assertThat(items.get(3).getName(), is("item1"));
     }
 
-
+    @Test
+    public void sortUp2() {
+        List<Item> items = Arrays.asList(new  Item( "item1"), new Item( "item4"), new Item( "item3"), new Item( "item2"));
+        Collections.sort(items, new CompSortUp());
+        List<Item> items1 = Arrays.asList(new  Item( "item1"), new Item( "item2"), new Item( "item3"), new Item( "item4"));
+        boolean a = items.equals(items1);
+        assertThat(items, is(items1));
+    }
 }
