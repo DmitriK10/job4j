@@ -14,6 +14,7 @@ public class User implements Comparable<User> {
         this.age = age;
     }
 
+    //метод сравнивает name и в случае иха равенства age
     @Override
     public int compareTo(User o) {
         int result = this.name.compareTo(o.name);
