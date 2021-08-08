@@ -31,7 +31,14 @@ public class ComparatorTest {
         List<Item> items = Arrays.asList(new  Item( "item1"), new Item( "item4"), new Item( "item3"), new Item( "item2"));
         Collections.sort(items, new CompSortUp());
         List<Item> items1 = Arrays.asList(new  Item( "item1"), new Item( "item2"), new Item( "item3"), new Item( "item4"));
-        boolean a = items.equals(items1);
+        assertThat(items, is(items1));
+    }
+
+    @Test
+    public void sortDown2() {
+        List<Item> items = Arrays.asList(new  Item( "item1"), new Item( "item4"), new Item( "item3"), new Item( "item2"));
+        Collections.sort(items, new CompSortDown());
+        List<Item> items1 = Arrays.asList(new  Item( "item4"), new Item( "item3"), new Item( "item2"), new Item( "item1"));
         assertThat(items, is(items1));
     }
 }
