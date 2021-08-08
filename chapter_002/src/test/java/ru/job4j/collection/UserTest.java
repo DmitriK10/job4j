@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 //1. Организовать сортировку User [#10034]
-
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
