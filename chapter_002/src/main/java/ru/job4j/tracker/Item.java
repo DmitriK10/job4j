@@ -15,6 +15,7 @@ public class Item {
         this.setName(name);
     }
 
+    //переопределение методов equal&hash
     @Override
     public boolean equals(Object o) {
         if (this == o) {
