@@ -30,7 +30,7 @@ public class FindByNameAction implements UserAction {
         if (items.size() == 0) {
             out.println("Заявка с name: " + name + " не найдена! Проверьте корректность name");
         } else {
-            for (int x = 0; x < items.size(); x ++) {
+            for (int x = 0; x < items.size(); x++) {
                 out.println("Item id: " + items.get(x).getId() + " name: " + items.get(x).getName());
             }
         }

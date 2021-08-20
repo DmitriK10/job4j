@@ -29,13 +29,13 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Show all" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator() +
-                        "=== Show all Items ====" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. Show all" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. Show all" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
+                        + "=== Show all Items ====" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Show all" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
         ));
     }
 
@@ -53,14 +53,14 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Find by Name" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator() +
-                        "=== Find Item by name ====" + System.lineSeparator() +
-                        "Заявка с name: Find item не найдена! Проверьте корректность name" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. Find by Name" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. Find by Name" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
+                        + "=== Find Item by name ====" + System.lineSeparator()
+                        + "Заявка с name: Find item не найдена! Проверьте корректность name" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Find by Name" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
         ));
     }
 
@@ -80,17 +80,18 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Find by Name" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator() +
-                        "=== Find Item by name ====" + System.lineSeparator() +
-                        "Item id: 1 name: New item 1" + System.lineSeparator() +
-                        "Item id: 3 name: New item 1" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. Find by Name" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. Find by Name" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
+                        + "=== Find Item by name ====" + System.lineSeparator()
+                        + "Item id: 1 name: New item 1" + System.lineSeparator()
+                        + "Item id: 3 name: New item 1" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Find by Name" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
         ));
     }
+
     @Test
     public void whenFindId() {
         Output out = new StubOutput();
@@ -104,14 +105,14 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Find by Id" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator() +
-                        "=== Find Item by id ====" + System.lineSeparator() +
-                        "Заявка с id: 1 не найдена! Проверьте корректность id" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. Find by Id" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. Find by Id" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
+                        + "=== Find Item by id ====" + System.lineSeparator()
+                        + "Заявка с id: 1 не найдена! Проверьте корректность id" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Find by Id" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
         ));
     }
 
@@ -131,14 +132,14 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Find by Id" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator() +
-                        "=== Find Item by id ====" + System.lineSeparator() +
-                        "Item id: 2 name: New item 2" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. Find by Id" + System.lineSeparator() +
-                        "1. Exit" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. Find by Id" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
+                        + "=== Find Item by id ====" + System.lineSeparator()
+                        + "Item id: 2 name: New item 2" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Find by Id" + System.lineSeparator()
+                        + "1. Exit" + System.lineSeparator()
         ));
     }
 
@@ -147,7 +148,7 @@ public class StartUITest {
     public void whenInvalidExit() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1","0"}
+                new String[] {"1", "0"}
 /* Пункты меню: неверный, верный.*/
         );
         Tracker tracker = new Tracker();

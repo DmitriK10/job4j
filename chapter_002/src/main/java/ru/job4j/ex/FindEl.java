@@ -22,7 +22,7 @@ public class FindEl {
         String key = "pwd";
         try {
             indexOf(data, key);
-        } catch (ElementNotFoundException q){
+        } catch (ElementNotFoundException q) {
             q.printStackTrace();
         }
     }
