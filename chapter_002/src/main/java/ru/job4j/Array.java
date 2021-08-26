@@ -13,6 +13,7 @@ public class Array {
 
     /**
      * reverse the given array in place * @param input
+     * @param input массив
      */
     public static void reverse(int[] input) {
         System.out.println("original array : " + Arrays.toString(input));

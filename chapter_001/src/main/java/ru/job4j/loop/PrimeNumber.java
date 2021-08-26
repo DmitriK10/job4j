@@ -7,6 +7,8 @@ package ru.job4j.loop;
 public class PrimeNumber {
     /**
      * посчитать количество простых чисел от 1 до finish.
+     * @param finish конец диапазона
+     * @return возвращает количество простых чисел
      */
     public int calc(int finish) {
         int count = 0;

@@ -9,6 +9,7 @@ public class EndsWith {
     /**
      * Проверяет. что слово заканчивается на префикс.
      * @param post префикс.
+     * @param word проверяемое слово
      * @return если слово начинаеться с префикса
      */
     public boolean endsWith(String word, String post) {
