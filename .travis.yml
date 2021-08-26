@@ -18,3 +18,4 @@ notifications:
       - ymd@yansdex.ru
     on_success: never # default: change
     on_failure: always # default: always
+  3f81f463-f374-47e4-a66e-13acf7bd4aa9
