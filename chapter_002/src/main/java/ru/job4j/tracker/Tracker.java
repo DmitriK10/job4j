@@ -1,10 +1,10 @@
 package ru.job4j.tracker;
 //6. Изменить программу Tracker из 2-го модуля [#10039]
 
-/*
+/**
  * Система заявок - Tracker.
  * @author Dmitrii K
- */
+ **/
 
 import java.util.ArrayList;
 import java.util.List;
