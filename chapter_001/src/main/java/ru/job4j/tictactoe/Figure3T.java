@@ -1,5 +1,8 @@
 package ru.job4j.tictactoe;
 import javafx.scene.shape.Rectangle;
+
+import java.awt.*;
+
 /**
  * Класс TicTacToe - реализует визуальный компонент.
  * @author Dmitry Kupriyanyuk (kupriyanyuk.d@yandex.ru)
